@@ -15,6 +15,7 @@
 }
 
 .feedArea {
+  overflow: hidden;
   position: relative;
   height: calc(100vh - to_vw(100));
 }
@@ -46,15 +47,16 @@
 }
 
 .feedList {
-  padding-top: to_vw(28);
-  height: 100%;
   overflow-y: auto;
+  height: calc(100% - to_vw(28));
+  margin-top: to_vw(28);
 
   li {
     padding: 0 to_vw($space-200);
 
     &:last-child {
       padding-bottom: to_vw(28);
+      border-bottom: 0;
     }
 
     a {

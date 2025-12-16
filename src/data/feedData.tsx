@@ -17,6 +17,57 @@ export interface FeedItem {
 //**category : LAB, DEV, LIFE
 export const feedData: FeedItem[] = [
   {
+    id: "js-async-await",
+    category: "DEV",
+    date: "16.12.25",
+    title: "What is async/await?",
+    content:
+      <>
+        <article>
+          <section>
+            <p>
+              <strong>Async/await</strong> is a way to handle asynchronous operations in JavaScript.
+              <br/>
+              It makes asynchronous code look like synchronous code, which is easier to read and understand.
+              <br/><br/>
+              An <strong>async</strong> function is a function that always returns a Promise.
+              <br/>
+              An <strong>await</strong> keyword pauses the execution and waits for the Promise to be resolved.
+              <br/><br/>
+              For example, when you fetch data from a server, it takes time.
+              <br/>
+              With async/await, you can wait for that data without blocking other code from running.
+            </p>
+          </section>
+
+          <section>
+          <pre>
+            <code>
+{`// Simple example: cooking dinner
+  async function cookDinner() {
+    console.log("Start cooking...");
+    
+    // Wait 3 seconds
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    
+    console.log("Dinner is ready!");
+  }
+  
+  cookDinner();
+  console.log("Other work can happen here!");
+  
+  // Output:
+  // Start cooking...
+  // Other work can happen here!
+  // (wait 3 seconds)
+  // Dinner is ready!`}
+            </code>
+          </pre>
+          </section>
+        </article>
+      </>
+  },
+  {
     id: "js-this-keyword",
     category: "DEV",
     date: "16.12.25",
@@ -26,15 +77,18 @@ export const feedData: FeedItem[] = [
         <article>
           <section>
             <p>
-              The <span className={style.bgTxt}>this</span> keyword refers to the object that is currently executing the code.
+              The <span className={style.bgTxt}>this</span> keyword refers to the object that is currently executing the
+              code.
               <br/>
               What <span className={style.bgTxt}>this</span> refers to depends on how the function is called.
               <br/><br/>
               In a regular function, <span className={style.bgTxt}>this</span> refers to the global object.
               <br/>
-              In a method - which is a function inside an object - <span className={style.bgTxt}>this</span> refers to that object itself.
+              In a method - which is a function inside an object - <span className={style.bgTxt}>this</span> refers to
+              that object itself.
               <br/><br/>
-              Arrow functions work differently. They don't have their own <span className={style.bgTxt}>this</span>, so they use the <span className={style.bgTxt}>this</span> from the outer function instead.
+              Arrow functions work differently. They don't have their own <span className={style.bgTxt}>this</span>, so
+              they use the <span className={style.bgTxt}>this</span> from the outer function instead.
             </p>
           </section>
 
@@ -84,12 +138,16 @@ console.log(cat.name); // "Whiskers"`}
             <p>
               Scope is the range where a variable can be accessed. In JavaScript, there are three types of scope:
               <br/><br/>
-              First, <strong>global scope</strong> - a variable declared outside any function can be accessed anywhere in your code.
+              First, <strong>global scope</strong> - a variable declared outside any function can be accessed anywhere
+              in your code.
               <br/><br/>
-              Second, <strong>function scope</strong> - a variable declared inside a function can only be accessed within that function.
+              Second, <strong>function scope</strong> - a variable declared inside a function can only be accessed
+              within that function.
               <br/><br/>
-              Third, <strong>block scope</strong> - when you use <span className={style.bgTxt}>let</span> or <span className={style.bgTxt}>const</span> inside curly braces, the variable can only be used within that block.
-              Using <span className={style.bgTxt}>let</span> and <span className={style.bgTxt}>const</span> is better than <span className={style.bgTxt}>var</span> because they have block scope, which helps prevent bugs.
+              Third, <strong>block scope</strong> - when you use <span className={style.bgTxt}>let</span> or <span
+              className={style.bgTxt}>const</span> inside curly braces, the variable can only be used within that block.
+              Using <span className={style.bgTxt}>let</span> and <span className={style.bgTxt}>const</span> is better
+              than <span className={style.bgTxt}>var</span> because they have block scope, which helps prevent bugs.
             </p>
           </section>
 
@@ -124,14 +182,18 @@ console.log(blockVar); // Error! blockVar is not accessible outside the block`}
 
           <section>
             <p>
-              <strong>Hoisting</strong> is a JavaScript behavior where variable and function declarations are moved to the top of their
+              <strong>Hoisting</strong> is a JavaScript behavior where variable and function declarations are moved to
+              the top of their
               scope before the code actually runs. So, the important thing to remember is that only the declaration is
               hoisted, not the value or assignment.
               <br/><br/>
-              For example, with functions, you can call a function before you define it in your code, and it still works.
-              But with variables, if you use <span className={style.bgTxt}>var</span>, the variable will be undefined until you assign it a value.
+              For example, with functions, you can call a function before you define it in your code, and it still
+              works.
+              But with variables, if you use <span className={style.bgTxt}>var</span>, the variable will be undefined
+              until you assign it a value.
               <br/><br/>
-              With modern JavaScript, we use <span className={style.bgTxt}>let</span> and <span className={style.bgTxt}>const</span> instead of <span className={style.bgTxt}>var</span>,
+              With modern JavaScript, we use <span className={style.bgTxt}>let</span> and <span
+              className={style.bgTxt}>const</span> instead of <span className={style.bgTxt}>var</span>,
               which is better practice because it avoids hoisting confusion.
               And the best approach is to always declare your variables before you use them in your code.
             </p>
@@ -167,7 +229,8 @@ console.log(x); // 5`}
               <br/>
               Here's a simple example:
               when you have a function inside a function, the inner function can use the
-              variables from the outer function. This is very useful in JavaScript for data privacy and creating functions that remember values.
+              variables from the outer function. This is very useful in JavaScript for data privacy and creating
+              functions that remember values.
             </p>
           </section>
 
