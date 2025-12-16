@@ -17,18 +17,195 @@ export interface FeedItem {
 //**category : LAB, DEV, LIFE
 export const feedData: FeedItem[] = [
   {
+    id: "js-this-keyword",
+    category: "DEV",
+    date: "16.12.25",
+    title: "What is the “this” keyword in JavaScript?",
+    content:
+      <>
+        <article>
+          <section>
+            <p>
+              The <span className={style.bgTxt}>this</span> keyword refers to the object that is currently executing the code.
+              <br/>
+              What <span className={style.bgTxt}>this</span> refers to depends on how the function is called.
+              <br/><br/>
+              In a regular function, <span className={style.bgTxt}>this</span> refers to the global object.
+              <br/>
+              In a method - which is a function inside an object - <span className={style.bgTxt}>this</span> refers to that object itself.
+              <br/><br/>
+              Arrow functions work differently. They don't have their own <span className={style.bgTxt}>this</span>, so they use the <span className={style.bgTxt}>this</span> from the outer function instead.
+            </p>
+          </section>
+
+          <section>
+        <pre>
+          <code>
+{`// 1. 객체의 메서드에서 this = 그 객체
+const dog = {
+  name: "Max",
+  bark: function() {
+    console.log(this.name + " is barking"); // "Max is barking"
+  }
+};
+dog.bark();
+
+// 2. 일반 함수에서 this = 전역 객체
+function test() {
+  console.log(this); // 전역 객체
+}
+test();
+
+// 3. new로 만든 객체에서 this = 새로운 객체
+function Animal(name) {
+  this.name = name;
+}
+const cat = new Animal("Whiskers");
+console.log(cat.name); // "Whiskers"`}
+          </code>
+        </pre>
+          </section>
+        </article>
+      </>
+  },
+  {
+    id: "js-essential-concepts",
+    category: "DEV",
+    date: "16.12.25",
+    title: "JavaScript Essential Concepts",
+    content:
+      <>
+        <article>
+          <header>
+            <h2>1. Scope</h2>
+          </header>
+
+          <section>
+            <p>
+              Scope is the range where a variable can be accessed. In JavaScript, there are three types of scope:
+              <br/><br/>
+              First, <strong>global scope</strong> - a variable declared outside any function can be accessed anywhere in your code.
+              <br/><br/>
+              Second, <strong>function scope</strong> - a variable declared inside a function can only be accessed within that function.
+              <br/><br/>
+              Third, <strong>block scope</strong> - when you use <span className={style.bgTxt}>let</span> or <span className={style.bgTxt}>const</span> inside curly braces, the variable can only be used within that block.
+              Using <span className={style.bgTxt}>let</span> and <span className={style.bgTxt}>const</span> is better than <span className={style.bgTxt}>var</span> because they have block scope, which helps prevent bugs.
+            </p>
+          </section>
+
+          <section>
+            <pre>
+              <code>
+{`// Global Scope
+let globalVar = "I'm global";
+
+function myFunction() {
+  // Function Scope
+  let functionVar = "I'm inside function";
+  console.log(globalVar);
+}
+
+if (true) {
+  // Block Scope
+  let blockVar = "I'm inside block";
+  console.log(globalVar);
+}
+
+console.log(blockVar); // Error! blockVar is not accessible outside the block`}
+              </code>
+            </pre>
+          </section>
+        </article>
+
+        <article>
+          <header>
+            <h2>2. Hoisting</h2>
+          </header>
+
+          <section>
+            <p>
+              <strong>Hoisting</strong> is a JavaScript behavior where variable and function declarations are moved to the top of their
+              scope before the code actually runs. So, the important thing to remember is that only the declaration is
+              hoisted, not the value or assignment.
+              <br/><br/>
+              For example, with functions, you can call a function before you define it in your code, and it still works.
+              But with variables, if you use <span className={style.bgTxt}>var</span>, the variable will be undefined until you assign it a value.
+              <br/><br/>
+              With modern JavaScript, we use <span className={style.bgTxt}>let</span> and <span className={style.bgTxt}>const</span> instead of <span className={style.bgTxt}>var</span>,
+              which is better practice because it avoids hoisting confusion.
+              And the best approach is to always declare your variables before you use them in your code.
+            </p>
+          </section>
+
+          <section>
+            <pre>
+              <code>
+{`// Function hoisting works
+sayHi(); // "Hi"
+
+function sayHi() {
+  console.log("Hi");
+}
+
+// Variable hoisting returns undefined
+console.log(x); // undefined
+var x = 5;
+console.log(x); // 5`}
+              </code>
+            </pre>
+          </section>
+        </article>
+
+        <article>
+          <header>
+            <h2>3. Closure</h2>
+          </header>
+
+          <section>
+            <p>
+              A closure is when a function has access to variables from another function.
+              <br/>
+              Here's a simple example:
+              when you have a function inside a function, the inner function can use the
+              variables from the outer function. This is very useful in JavaScript for data privacy and creating functions that remember values.
+            </p>
+          </section>
+
+          <section>
+          <pre>
+          <code>
+{`function outer() {
+  let count = 0;
+
+  function inner() {
+    count++;
+    console.log(count);
+  }
+
+  return inner;
+}
+
+const counter = outer();
+counter(); // 1
+counter(); // 2
+counter(); // 3`}
+          </code>
+        </pre>
+          </section>
+        </article>
+      </>
+  },
+  {
     id: "how-to-survive",
     category: "LIFE",
     date: "15.12.25",
     title: "How to survive the AI era as a frontend-developer",
     content:
-    <>
-      <article>
-        <section>
+      <>
+        <article>
 
-        </section>
-      </article>
-    </>
+        </article>
+      </>
   },
   {
     id: "3d-folding-effect",
@@ -50,7 +227,7 @@ export const feedData: FeedItem[] = [
     date: "19.09.25",
     title: "I heard this story about a fish.",
     content:
-      <>
+      (
         <article>
           <section>
             <p>
@@ -67,7 +244,7 @@ export const feedData: FeedItem[] = [
             <strong>Soul (2020), Disney Pixar</strong>
           </section>
         </article>
-      </>
+      )
   },
   {
     id: "secret-santa",
@@ -75,7 +252,7 @@ export const feedData: FeedItem[] = [
     date: "18.09.25",
     title: "Flipping Secret Santa on Its Head",
     content:
-      <>
+      (
         <article>
           <header>
             <h2>Flipping Secret Santa on Its Head</h2>
@@ -105,7 +282,7 @@ export const feedData: FeedItem[] = [
             </p>
           </section>
         </article>
-      </>
+      )
   },
   {
     id: "sticky-vertical-slide",
@@ -148,8 +325,8 @@ export const feedData: FeedItem[] = [
             <p>Go to <strong>File</strong> &gt; <strong>Settings</strong> &gt; <strong>Plugins</strong> and install the
               following plugins:</p>
             <ul className={style.itemList}>
-              <li><strong className={style.bk}>Sass</strong></li>
-              <li><strong className={style.bk}>File Watchers</strong></li>
+              <li><strong>Sass</strong></li>
+              <li><strong>File Watchers</strong></li>
             </ul>
           </section>
         </article>

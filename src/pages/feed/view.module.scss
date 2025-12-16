@@ -83,7 +83,6 @@
         opacity: .2;
       }
     }
-
   }
 
   h2 {
@@ -175,4 +174,14 @@
     width: 100%;
     height: auto;
   }
+}
+
+.bgTxt {
+  padding: 0 to_vw(4);
+  margin: 0 to_vw(2);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #efefef;
+  font-weight: 600;
+  color: tomato;
 }
