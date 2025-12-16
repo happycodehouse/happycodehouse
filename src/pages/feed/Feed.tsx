@@ -1,12 +1,11 @@
 import React from "react";
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { PiArrowSquareOutBold } from "react-icons/pi";
 
 import style from "./feed.module.scss";
 import FilterButtonGroup from "../../components/common/FilterButtonGroup";
 import { feedData } from "../../data/feedData";
-import classNames from "classnames";
 
 interface FeedItem {
   id: string | number;
@@ -33,13 +32,11 @@ const Feed: React.FC = () => {
     setSelectedFilter(filter);
   }, []);
 
-  const filteredData = useMemo<FeedItem[]>(() => {
-    return selectedFilter === "ALL"
-      ? feedData
-      : feedData.filter((item: FeedItem) => item.category === selectedFilter);
-  }, [selectedFilter]);
+  const filteredData = selectedFilter === "ALL"
+    ? feedData
+    : feedData.filter((item: FeedItem) => item.category === selectedFilter);
 
-  const buttonData = useMemo<ButtonData[]>(() => [
+  const buttonData: ButtonData[] = [
     {
       key: "all",
       value: "ALL",
@@ -50,7 +47,7 @@ const Feed: React.FC = () => {
       value: filter,
       label: filter
     }))
-  ], [selectedFilter]);
+  ];
 
   if (!feedData?.length) {
     return <div className="container">No feed data available</div>;
