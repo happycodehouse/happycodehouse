@@ -17,6 +17,20 @@ export interface FeedItem {
 //**category : LAB, DEV, LIFE
 export const feedData: FeedItem[] = [
   {
+    id: "how-to-survive",
+    category: "LIFE",
+    date: "15.12.25",
+    title: "How to survive the AI era as a frontend-developer",
+    content:
+    <>
+      <article>
+        <section>
+
+        </section>
+      </article>
+    </>
+  },
+  {
     id: "3d-folding-effect",
     category: "LAB",
     date: "13.11.25",
@@ -417,15 +431,6 @@ onUpdate: function (self) {
             <p>
               <strong>Why it matters:</strong> Eliminated 4 flag variables and all the progress
               calculation logic. ScrollTrigger handles forward and backward scrolling naturally.
-            </p>
-          </section>
-
-          <section>
-            <h3>4. Why GSAP ScrollTrigger?</h3>
-            <p>
-              I chose ScrollTrigger for its declarative timeline system and built-in matchMedia
-              support. Instead of calculating "how far the user has scrolled," I could just
-              define "what should happen when" and let GSAP orchestrate everything.
             </p>
           </section>
         </article>
