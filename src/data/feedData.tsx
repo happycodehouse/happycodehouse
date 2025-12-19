@@ -154,22 +154,27 @@ console.log(cat.name); // "Whiskers"`}
           <section>
             <pre>
               <code>
-{`// Global Scope
-let globalVar = "I'm global";
+{`let global = "Accessible anywhere";
 
-function myFunction() {
-  // Function Scope
-  let functionVar = "I'm inside function";
-  console.log(globalVar);
+function testFunction() {
+  let funcVar = "Only inside function";
+  
+  if (true) {
+    let blockVar = "Only inside block";
+    
+    console.log(global);    // ✅ Can access all
+    console.log(funcVar);   // ✅ Can access parent function variable
+    console.log(blockVar);  // ✅ Can access own variable
+  }
+  
+  console.log(global);      // ✅ Accessible
+  console.log(funcVar);     // ✅ Accessible
+  console.log(blockVar);    // ❌ Error! Not accessible outside the block
 }
 
-if (true) {
-  // Block Scope
-  let blockVar = "I'm inside block";
-  console.log(globalVar);
-}
-
-console.log(blockVar); // Error! blockVar is not accessible outside the block`}
+console.log(global);        // ✅ Accessible
+console.log(funcVar);       // ❌ Error! Not accessible outside the function
+console.log(blockVar);      // ❌ Error! Not accessible outside the block`}
               </code>
             </pre>
           </section>

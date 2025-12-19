@@ -143,9 +143,10 @@
   }
 
   pre {
-    margin: to_vw($space-200) auto to_vw($space-500);
-    padding: to_vw($space-200);
     width: calc(100% - to_vw($space-400));
+    padding: to_vw($space-200);
+    margin: to_vw($space-200) auto to_vw($space-500);
+    white-space: pre;
 
     @include media(false, tablet) {
       @include fontSize(12, 21);
