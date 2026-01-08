@@ -111,90 +111,41 @@ export const projectsData: CompanyProject[] = [
     projects: [
       {
         title: {
-          kr: "삼성전기 홈페이지 운영",
-          en: <>Samsung Electro-Mechanics Website <br/> Maintenance & Enhancement</>,
-          url: {
-            kr: "https://www.samsungvx.com/onboarding",
-            en: "https://www.samsungsem.com/global/index.do"
-          }
+          kr: "DB그룹 CI 아카이브 개편",
+          en: "DB GROUP CI ARCHIVE RENEWAL"
         },
-        period: "2023.09 - Present",
+        period: "2025.10 - 2025.12",
         details: {
           kr: [
             {
-              text: <>SEM <a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> 기술 리소스
-                플랫폼 구축 및 운영</>,
+              text: "공통 UI 컴포넌트 설계부터 페이지 단위 제작까지 전반적인 프론트엔드 구축 담당"
             },
             {
-              text: "제품정보 카테고리 개편 및 사용자 경험 개선",
-              url: "https://www.samsungsem.com/kr/product/module/camera-module/automotive-camera-modules.do"
+              text: "반복 사용되는 컴포넌트를 스크립트로 자동화하여 개발 효율 및 유지보수성 향상"
             },
             {
-              text: "매년 웹 접근성 WCAG 2.1 AA 인증 갱신 (WebWatch 심사 통과)"
+              text: "GSAP를 활용해 스크롤·트랜지션 기반 인터랙션을 구현하고 CI 콘텐츠의 흐름과 가독성 강화"
             },
             {
-              text: "뉴스레터 연간 리뉴얼 (멀티 플랫폼 호환성 95% 향상)"
-            },
-            {
-              text: "지속가능경영 카테고리 개편 및 인터랙티브 요소 구현",
-              video: samsungMp4
-            },
-            {
-              text: "푸른코끼리 갤러리 AJAX 기반 동적 로딩 시스템 구축 (페이지 로딩 속도 30% 개선)",
-              url: "https://samsungsem.com/kr/bepuco/contest.do"
+              text: "공통 컴포넌트 구조 정비 및 코드 정리를 통해 개발 안정성을 확보하고 일정 내 오픈 달성"
             }
           ],
           en: [
             {
-              text: <>SEM <a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> Platform Development & Operations</>,
+              text: "Led end-to-end front-end development from common UI components to page-level implementation"
             },
             {
-              text: "Product Category Restructuring & UX Enhancement",
-              url: "https://www.samsungsem.com/global/product/module/camera-module/automotive-camera-modules.do"
+              text: "Automated reusable components with scripts to improve development efficiency and maintainability"
             },
             {
-              text: "Maintain WCAG 2.1 AA certification through annual WebWatch audits"
+              text: "Implemented GSAP-driven scroll and transition animations to enhance CI content flow and readability"
             },
             {
-              text: "Redesigned Annual Newsletter for multi-platform compatibility"
-            },
-            {
-              text: "Developed Sustainability Category with interactive data visualizations",
-              video: samsungMp4
-            },
-            {
-              text: "Implemented AJAX-based dynamic loading (30% speed improvement)",
-              url: "https://samsungsem.com/kr/bepuco/contest.do"
+              text: "Secured development stability and met the launch schedule by refining common component structure and codebase"
             }
           ]
         },
-        tags: ["#AJAX", "#WCAG", "#WebPerformance", "#AdaptiveDesign"]
-      },
-      {
-        title: {
-          kr: "삼양그룹 계열사 웹사이트 운영",
-          en: "Samyang Group Subsidiaries Website Maintenance"
-        },
-        period: "2023.09 - Present",
-        details: {
-          kr: [
-            {
-              text: <><a href="https://samyangspecialty.com/kr/index" target="_blank" rel="noopener noreferrer">Samyang Specialty</a>/<a href="https://www.samyangep.com/kr/index" target="_blank" rel="noopener noreferrer">삼양사 AM BU</a> 홈페이지 통합 관리</>
-            },
-            {
-              text: "정기적 콘텐츠 업데이트 및 기술적 유지보수"
-            }
-          ],
-          en: [
-            {
-              text: <><a href="https://samyangspecialty.com/en/index" target="_blank" rel="noopener noreferrer">Samyang Specialty</a> and <a href="https://www.samyangep.com/en/index" target="_blank" rel="noopener noreferrer">Samyang AM BU</a> Website Management</>
-            },
-            {
-              text: "Regular content updates and technical maintenance"
-            }
-          ]
-        },
-        tags: ["#SCSS", "#AdaptiveDesign"]
+        tags: ["#GSAP", "#SCSS", "#ResponsiveDesign", "#Figma"]
       },
       {
         title: {
@@ -238,7 +189,7 @@ export const projectsData: CompanyProject[] = [
             }
           ]
         },
-        tags: ["#GSAP","#SCSS", "#DesignSystem", "#ResponsiveDesign"]
+        tags: ["#GSAP","#SCSS", "#DesignSystem", "#ResponsiveDesign", "#Figma"]
       },
       {
         title: {
@@ -276,7 +227,7 @@ export const projectsData: CompanyProject[] = [
             }
           ]
         },
-        tags: ["#GSAP", "#SCSS", "#ResponsiveDesign"]
+        tags: ["#GSAP", "#SCSS", "#ResponsiveDesign", "#Figma"]
       },
       {
         title: {
@@ -314,7 +265,7 @@ export const projectsData: CompanyProject[] = [
             }
           ]
         },
-        tags: ["#GSAP","#SCSS", "#DesignSystem", "#ResponsiveDesign"]
+        tags: ["#GSAP", "#SCSS", "#DesignSystem", "#ResponsiveDesign", "#Figma"]
       },
       {
         title: {
@@ -403,7 +354,94 @@ export const projectsData: CompanyProject[] = [
           ]
         },
         tags: ["#GSAP", "#SCSS", "#ResponsiveDesign"]
-      }
+      },
+      {
+        title: {
+          kr: "삼성전기 홈페이지 운영",
+          en: <>Samsung Electro-Mechanics Website <br/> Maintenance & Enhancement</>,
+          url: {
+            kr: "https://www.samsungvx.com/onboarding",
+            en: "https://www.samsungsem.com/global/index.do"
+          }
+        },
+        period: "2023.09 - Present",
+        details: {
+          kr: [
+            {
+              text: <>SEM <a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> 기술 리소스
+                플랫폼 구축 및 운영</>,
+            },
+            {
+              text: "제품정보 카테고리 개편 및 사용자 경험 개선",
+              url: "https://www.samsungsem.com/kr/product/module/camera-module/automotive-camera-modules.do"
+            },
+            {
+              text: "매년 웹 접근성 WCAG 2.1 AA 인증 갱신 (WebWatch 심사 통과)"
+            },
+            {
+              text: "뉴스레터 연간 리뉴얼 (멀티 플랫폼 호환성 95% 향상)"
+            },
+            {
+              text: "지속가능경영 카테고리 개편 및 인터랙티브 요소 구현",
+              video: samsungMp4
+            },
+            {
+              text: "푸른코끼리 갤러리 AJAX 기반 동적 로딩 시스템 구축 (페이지 로딩 속도 30% 개선)",
+              url: "https://samsungsem.com/kr/bepuco/contest.do"
+            }
+          ],
+          en: [
+            {
+              text: <>SEM <a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> Platform Development & Operations</>,
+            },
+            {
+              text: "Product Category Restructuring & UX Enhancement",
+              url: "https://www.samsungsem.com/global/product/module/camera-module/automotive-camera-modules.do"
+            },
+            {
+              text: "Maintain WCAG 2.1 AA certification through annual WebWatch audits"
+            },
+            {
+              text: "Redesigned Annual Newsletter for multi-platform compatibility"
+            },
+            {
+              text: "Developed Sustainability Category with interactive data visualizations",
+              video: samsungMp4
+            },
+            {
+              text: "Implemented AJAX-based dynamic loading (30% speed improvement)",
+              url: "https://samsungsem.com/kr/bepuco/contest.do"
+            }
+          ]
+        },
+        tags: ["#AJAX", "#WCAG", "#WebPerformance", "#AdaptiveDesign"]
+      },
+      {
+        title: {
+          kr: "삼양 스페셜티/ 삼양 AM BU 사이트 유지운영",
+          en: <>Samyang Speciality / Samyang AM BU <br/> Website Maintenance</>
+        },
+        period: "2023.09 - Present",
+        details: {
+          kr: [
+            {
+              text: <><a href="https://samyangspecialty.com/kr/index" target="_blank" rel="noopener noreferrer">Samyang Specialty</a>/<a href="https://www.samyangep.com/kr/index" target="_blank" rel="noopener noreferrer">삼양사 AM BU</a> 홈페이지 통합 관리</>
+            },
+            {
+              text: "정기적 콘텐츠 업데이트 및 기술적 유지보수"
+            }
+          ],
+          en: [
+            {
+              text: <><a href="https://samyangspecialty.com/en/index" target="_blank" rel="noopener noreferrer">Samyang Specialty</a> and <a href="https://www.samyangep.com/en/index" target="_blank" rel="noopener noreferrer">Samyang AM BU</a> Website Management</>
+            },
+            {
+              text: "Regular content updates and technical maintenance"
+            }
+          ]
+        },
+        tags: ["#SCSS", "#AdaptiveDesign"]
+      },
     ]
   },
   {

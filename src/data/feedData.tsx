@@ -5,6 +5,10 @@ import intellij_scss_img_01 from "../assets/images/feed/intellij-scss/img-01.png
 import intellij_scss_img_02 from "../assets/images/feed/intellij-scss/img-02.png";
 import style from "../pages/feed/view.module.scss";
 
+import intellij_autoprefixer_img_01 from "../assets/images/feed/intellij-autoprefixer/img-01.png";
+import intellij_autoprefixer_img_02 from "../assets/images/feed/intellij-autoprefixer/img-02.png";
+import intellij_autoprefixer_img_03 from "../assets/images/feed/intellij-autoprefixer/img-03.png";
+
 export interface FeedItem {
   id: string;
   category: "LAB" | "DEV" | "LIFE";
@@ -16,6 +20,186 @@ export interface FeedItem {
 
 //**category : LAB, DEV, LIFE
 export const feedData: FeedItem[] = [
+  {
+    id: "intellij-autoprefixer",
+    category: "DEV",
+    date: "06.01.26",
+    title: "IntelliJ IDEA Autoprefixer Setup Guide",
+    content:
+      <>
+        <article>
+          <section>
+            <p>
+              In VS Code, Sass compilation and autoprefixer settings were handled through
+              <span className={style.bgTxt}>settings.json</span> and the Live Sass Compiler extension.
+              However, when switching to IntelliJ IDEA, I realized that there was no equivalent,
+              centralized configuration file.
+              <br/><br/>
+              This made editor-specific settings impractical for a team environment.
+              To achieve consistent CSS output regardless of the editor, I decided to move the configuration
+              to a project-level setup using <span className={style.bgTxt}>PostCSS</span> and <span className={style.bgTxt}>Browserslist</span>.
+            </p>
+          </section>
+        </article>
+
+        <article>
+          <header>
+            <h2>1. Install Package</h2>
+          </header>
+
+          <section>
+            <p>
+              To make Sass compilation and vendor prefix handling editor-agnostic,
+              I decided to rely on <span className={style.bgTxt}>Node.js</span>-based tooling.
+              This allows the same CSS output regardless of whether the project is opened
+              in IntelliJ IDEA, VS Code, or any other editor.
+              <br/><br/>
+              If the project does not already contain a <span className={style.bgTxt}>package.json</span>,
+              initialize it first:
+            </p>
+
+            <pre>
+              <code>
+{`npm init -y`}
+              </code>
+            </pre>
+
+            <p>
+              Then install the required development dependencies:
+            </p>
+
+            <pre>
+              <code>
+{`npm install --save-dev sass postcss postcss-cli autoprefixer`}
+              </code>
+            </pre>
+
+            <p>
+              This will automatically generate both <span className={style.bgTxt}>package.json</span> and
+              <span className={style.bgTxt}>package-lock.json</span>, ensuring that all team members
+              use the same package versions.
+            </p>
+          </section>
+        </article>
+
+        <article>
+          <header>
+            <h2>2. Browserslist Configuration</h2>
+          </header>
+
+          <section>
+            <p>
+              Autoprefixer determines which vendor prefixes to apply based on the target
+              browsers defined in <span className={style.bgTxt}>Browserslist</span>.
+              By extracting this configuration into a separate file, the browser support
+              policy becomes explicit and consistent across all environments.
+              <br/><br/>
+              Create a <span className={style.bgTxt}>.browserslistrc</span> file
+              at the root of the project:
+            </p>
+
+            <pre>
+              <code>
+{`> 0.1%
+last 2 versions`}
+              </code>
+            </pre>
+
+            <p>
+              This configuration targets modern browsers while maintaining reasonable
+              backward compatibility without unnecessary legacy prefixes.
+            </p>
+          </section>
+        </article>
+
+        <article>
+          <header>
+            <h2>3. PostCSS Configuration</h2>
+          </header>
+
+          <section>
+            <p>
+              Instead of relying on editor-specific plugins, PostCSS is used as a
+              project-level CSS processing layer.
+              This ensures that vendor prefixing behaves the same regardless of the editor
+              or operating system.
+              <br/><br/>
+              Create a <span className={style.bgTxt}>postcss.config.js</span>
+              file in the project root:
+            </p>
+
+            <pre>
+              <code>
+{`module.exports = {
+  plugins: [
+    require('autoprefixer')
+  ]
+}`}
+              </code>
+            </pre>
+
+            <p>
+              Autoprefixer will automatically read the browser targets from
+              <span className={style.bgTxt}>.browserslistrc</span>,
+              keeping configuration clean and centralized.
+            </p>
+          </section>
+        </article>
+
+        <article>
+          <header>
+            <h2>4. IntelliJ IDEA Integration</h2>
+          </header>
+
+          <section>
+            <p>
+              IntelliJ IDEA does not provide a built-in alternative to VS Code’s Live Sass
+              Compiler.
+              Instead, <span className={style.bgTxt}>File Watchers</span> can be used to
+              trigger Sass and PostCSS processing on file changes.
+              <br/><br/>
+              Navigate to:
+              <br />
+              <strong>
+                Settings → Tools → File Watchers
+              </strong>
+              <br/><br/>
+              Configure a watcher that runs <span className={style.bgTxt}>sass</span> to
+              compile SCSS files into CSS.
+              <br/>
+              PostCSS can either be chained as a second watcher or executed via npm scripts.
+            </p>
+
+            <div className={style.borderBox}>
+              <div className={style.box}>
+              </div>
+
+              <div className={style.imgBox} data-uk-lightbox="animation: fade">
+                <a href={intellij_autoprefixer_img_01}>
+                  <img src={intellij_autoprefixer_img_01} alt=""/>
+                </a>
+                <a href={intellij_autoprefixer_img_02}>
+                  <img src={intellij_autoprefixer_img_02} alt=""/>
+                </a>
+                <a href={intellij_autoprefixer_img_03}>
+                  <img src={intellij_autoprefixer_img_03} alt=""/>
+                </a>
+              </div>
+
+              <p>
+                *Autoprefixer Arguments:
+                <br/>
+                <strong>"$FilePath$" --use autoprefixer --use cssnano --replace --no-map</strong>
+                <br/><br/>
+                *Sass Compiler Arguments: 
+                <br/>
+                <strong>--no-source-map --style=compressed $FileName$:$FileNameWithoutExtension$.min.css</strong>
+              </p>
+            </div>
+          </section>
+        </article>
+      </>
+  },
   {
     id: "js-async-await",
     category: "DEV",
@@ -93,8 +277,8 @@ export const feedData: FeedItem[] = [
           </section>
 
           <section>
-        <pre>
-          <code>
+            <pre>
+              <code>
 {`// 1. 객체의 메서드에서 this = 그 객체
 const dog = {
   name: "Max",
@@ -116,8 +300,8 @@ function Animal(name) {
 }
 const cat = new Animal("Whiskers");
 console.log(cat.name); // "Whiskers"`}
-          </code>
-        </pre>
+              </code>
+            </pre>
           </section>
         </article>
       </>
@@ -293,7 +477,7 @@ counter(); // 3`}
     id: "soul",
     category: "LIFE",
     date: "19.09.25",
-    title: "I heard this story about a fish.",
+    title: "I heard this story about a fish",
     content:
       (
         <article>
