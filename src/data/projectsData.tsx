@@ -112,7 +112,11 @@ export const projectsData: CompanyProject[] = [
       {
         title: {
           kr: "DB그룹 CI 아카이브 개편",
-          en: "DB GROUP CI ARCHIVE RENEWAL"
+          en: "DB GROUP CI ARCHIVE RENEWAL",
+          url: {
+            kr: "https://ci.dbgroup.co.kr/",
+            en: "https://ci.dbgroup.co.kr/"
+          }
         },
         period: "2025.10 - 2025.12",
         details: {

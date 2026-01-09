@@ -31,13 +31,13 @@ export const feedData: FeedItem[] = [
           <section>
             <p>
               In VS Code, Sass compilation and autoprefixer settings were handled through
-              <span className={style.bgTxt}>settings.json</span> and the Live Sass Compiler extension.
+              <span className={style.txtBox}>settings.json</span> and the Live Sass Compiler extension.
               However, when switching to IntelliJ IDEA, I realized that there was no equivalent,
               centralized configuration file.
               <br/><br/>
               This made editor-specific settings impractical for a team environment.
               To achieve consistent CSS output regardless of the editor, I decided to move the configuration
-              to a project-level setup using <span className={style.bgTxt}>PostCSS</span> and <span className={style.bgTxt}>Browserslist</span>.
+              to a project-level setup using <span className={style.txtBox}>PostCSS</span> and <span className={style.txtBox}>Browserslist</span>.
             </p>
           </section>
         </article>
@@ -50,11 +50,11 @@ export const feedData: FeedItem[] = [
           <section>
             <p>
               To make Sass compilation and vendor prefix handling editor-agnostic,
-              I decided to rely on <span className={style.bgTxt}>Node.js</span>-based tooling.
+              I decided to rely on <span className={style.txtBox}>Node.js</span>-based tooling.
               This allows the same CSS output regardless of whether the project is opened
               in IntelliJ IDEA, VS Code, or any other editor.
               <br/><br/>
-              If the project does not already contain a <span className={style.bgTxt}>package.json</span>,
+              If the project does not already contain a <span className={style.txtBox}>package.json</span>,
               initialize it first:
             </p>
 
@@ -75,8 +75,8 @@ export const feedData: FeedItem[] = [
             </pre>
 
             <p>
-              This will automatically generate both <span className={style.bgTxt}>package.json</span> and
-              <span className={style.bgTxt}>package-lock.json</span>, ensuring that all team members
+              This will automatically generate both <span className={style.txtBox}>package.json</span> and
+              <span className={style.txtBox}>package-lock.json</span>, ensuring that all team members
               use the same package versions.
             </p>
           </section>
@@ -90,11 +90,11 @@ export const feedData: FeedItem[] = [
           <section>
             <p>
               Autoprefixer determines which vendor prefixes to apply based on the target
-              browsers defined in <span className={style.bgTxt}>Browserslist</span>.
+              browsers defined in <span className={style.txtBox}>Browserslist</span>.
               By extracting this configuration into a separate file, the browser support
               policy becomes explicit and consistent across all environments.
               <br/><br/>
-              Create a <span className={style.bgTxt}>.browserslistrc</span> file
+              Create a <span className={style.txtBox}>.browserslistrc</span> file
               at the root of the project:
             </p>
 
@@ -124,7 +124,7 @@ last 2 versions`}
               This ensures that vendor prefixing behaves the same regardless of the editor
               or operating system.
               <br/><br/>
-              Create a <span className={style.bgTxt}>postcss.config.js</span>
+              Create a <span className={style.txtBox}>postcss.config.js</span>
               file in the project root:
             </p>
 
@@ -140,7 +140,7 @@ last 2 versions`}
 
             <p>
               Autoprefixer will automatically read the browser targets from
-              <span className={style.bgTxt}>.browserslistrc</span>,
+              <span className={style.txtBox}>.browserslistrc</span>,
               keeping configuration clean and centralized.
             </p>
           </section>
@@ -155,7 +155,7 @@ last 2 versions`}
             <p>
               IntelliJ IDEA does not provide a built-in alternative to VS Code’s Live Sass
               Compiler.
-              Instead, <span className={style.bgTxt}>File Watchers</span> can be used to
+              Instead, <span className={style.txtBox}>File Watchers</span> can be used to
               trigger Sass and PostCSS processing on file changes.
               <br/><br/>
               Navigate to:
@@ -164,7 +164,7 @@ last 2 versions`}
                 Settings → Tools → File Watchers
               </strong>
               <br/><br/>
-              Configure a watcher that runs <span className={style.bgTxt}>sass</span> to
+              Configure a watcher that runs <span className={style.txtBox}>sass</span> to
               compile SCSS files into CSS.
               <br/>
               PostCSS can either be chained as a second watcher or executed via npm scripts.
@@ -261,18 +261,18 @@ last 2 versions`}
         <article>
           <section>
             <p>
-              The <span className={style.bgTxt}>this</span> keyword refers to the object that is currently executing the
+              The <span className={style.txtBox}>this</span> keyword refers to the object that is currently executing the
               code.
               <br/>
-              What <span className={style.bgTxt}>this</span> refers to depends on how the function is called.
+              What <span className={style.txtBox}>this</span> refers to depends on how the function is called.
               <br/><br/>
-              In a regular function, <span className={style.bgTxt}>this</span> refers to the global object.
+              In a regular function, <span className={style.txtBox}>this</span> refers to the global object.
               <br/>
-              In a method - which is a function inside an object - <span className={style.bgTxt}>this</span> refers to
+              In a method - which is a function inside an object - <span className={style.txtBox}>this</span> refers to
               that object itself.
               <br/><br/>
-              Arrow functions work differently. They don't have their own <span className={style.bgTxt}>this</span>, so
-              they use the <span className={style.bgTxt}>this</span> from the outer function instead.
+              Arrow functions work differently. They don't have their own <span className={style.txtBox}>this</span>, so
+              they use the <span className={style.txtBox}>this</span> from the outer function instead.
             </p>
           </section>
 
@@ -328,10 +328,10 @@ console.log(cat.name); // "Whiskers"`}
               Second, <strong>function scope</strong> - a variable declared inside a function can only be accessed
               within that function.
               <br/><br/>
-              Third, <strong>block scope</strong> - when you use <span className={style.bgTxt}>let</span> or <span
-              className={style.bgTxt}>const</span> inside curly braces, the variable can only be used within that block.
-              Using <span className={style.bgTxt}>let</span> and <span className={style.bgTxt}>const</span> is better
-              than <span className={style.bgTxt}>var</span> because they have block scope, which helps prevent bugs.
+              Third, <strong>block scope</strong> - when you use <span className={style.txtBox}>let</span> or <span
+              className={style.txtBox}>const</span> inside curly braces, the variable can only be used within that block.
+              Using <span className={style.txtBox}>let</span> and <span className={style.txtBox}>const</span> is better
+              than <span className={style.txtBox}>var</span> because they have block scope, which helps prevent bugs.
             </p>
           </section>
 
@@ -378,11 +378,11 @@ console.log(blockVar);      // ❌ Error! Not accessible outside the block`}
               <br/><br/>
               For example, with functions, you can call a function before you define it in your code, and it still
               works.
-              But with variables, if you use <span className={style.bgTxt}>var</span>, the variable will be undefined
+              But with variables, if you use <span className={style.txtBox}>var</span>, the variable will be undefined
               until you assign it a value.
               <br/><br/>
-              With modern JavaScript, we use <span className={style.bgTxt}>let</span> and <span
-              className={style.bgTxt}>const</span> instead of <span className={style.bgTxt}>var</span>,
+              With modern JavaScript, we use <span className={style.txtBox}>let</span> and <span
+              className={style.txtBox}>const</span> instead of <span className={style.txtBox}>var</span>,
               which is better practice because it avoids hoisting confusion.
               And the best approach is to always declare your variables before you use them in your code.
             </p>
