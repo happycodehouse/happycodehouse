@@ -21,6 +21,13 @@ export interface FeedItem {
 //**category : LAB, DEV, LIFE
 export const feedData: FeedItem[] = [
   {
+    id: "vanilla-carousel-demo",
+    category: "LAB",
+    date: "19.01.26",
+    title: "Vanilla Carousel Demo",
+    externalUrl: "https://vanilla-carousel-demo.netlify.app/"
+  },
+  {
     id: "intellij-autoprefixer",
     category: "DEV",
     date: "06.01.26",
@@ -170,32 +177,27 @@ last 2 versions`}
               PostCSS can either be chained as a second watcher or executed via npm scripts.
             </p>
 
-            <div className={style.borderBox}>
-              <div className={style.box}>
-              </div>
-
-              <div className={style.imgBox} data-uk-lightbox="animation: fade">
-                <a href={intellij_autoprefixer_img_01}>
-                  <img src={intellij_autoprefixer_img_01} alt=""/>
-                </a>
-                <a href={intellij_autoprefixer_img_02}>
-                  <img src={intellij_autoprefixer_img_02} alt=""/>
-                </a>
-                <a href={intellij_autoprefixer_img_03}>
-                  <img src={intellij_autoprefixer_img_03} alt=""/>
-                </a>
-              </div>
-
-              <p>
-                *Autoprefixer Arguments:
-                <br/>
-                <strong>"$FilePath$" --use autoprefixer --use cssnano --replace --no-map</strong>
-                <br/><br/>
-                *Sass Compiler Arguments: 
-                <br/>
-                <strong>--no-source-map --style=compressed $FileName$:$FileNameWithoutExtension$.min.css</strong>
-              </p>
+            <div className={style.imgBox} data-uk-lightbox="animation: fade">
+              <a href={intellij_autoprefixer_img_01}>
+                <img src={intellij_autoprefixer_img_01} alt=""/>
+              </a>
+              <a href={intellij_autoprefixer_img_02}>
+                <img src={intellij_autoprefixer_img_02} alt=""/>
+              </a>
+              <a href={intellij_autoprefixer_img_03}>
+                <img src={intellij_autoprefixer_img_03} alt=""/>
+              </a>
             </div>
+
+            <p>
+              *Autoprefixer Arguments:
+              <br/>
+              <strong>"$FilePath$" --use autoprefixer --use cssnano --replace --no-map</strong>
+              <br/><br/>
+              *Sass Compiler Arguments:
+              <br/>
+              <strong>--no-source-map --style=compressed $FileName$:$FileNameWithoutExtension$.min.css</strong>
+            </p>
           </section>
         </article>
       </>
@@ -451,11 +453,21 @@ counter(); // 3`}
     id: "how-to-survive",
     category: "LIFE",
     date: "15.12.25",
-    title: "How to survive the AI era as a frontend-developer",
+    title: "How to Thrive (Not Just Survive) as a Frontend Developer in the AI Era",
     content:
       <>
         <article>
+          <header>
+            <h2>Frontend Developer </h2>
+          </header>
 
+          <section></section>
+        </article>
+
+        <article>
+          <header></header>
+
+          <section></section>
         </article>
       </>
   },
