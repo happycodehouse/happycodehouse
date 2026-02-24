@@ -21,6 +21,75 @@ export interface FeedItem {
 //**category : LAB, DEV, LIFE
 export const feedData: FeedItem[] = [
   {
+    id: "frontend-in-the-ai-era",
+    category: "LIFE",
+    date: "19.02.26",
+    title: "Being a Frontend Developer When AI Writes the Code",
+    content:
+      <>
+        <article>
+          <header>
+            <h2>When AI Can Do What You Do</h2>
+          </header>
+          <section>
+            <p>
+              Ask AI to write code these days, and it actually does a decent job.
+              So what are we supposed to do with that?
+            </p>
+          </section>
+        </article>
+
+        <article>
+          <header>
+            <h2>Judgment Is What's Left</h2>
+          </header>
+          <section>
+            <p>
+              AI can write the code, but it can't tell you if it's right.
+              Is there a bug? Is there unnecessary logic? Is it secure enough?
+              Which AI tool is even worth using for this project?
+              That judgment comes from experience — and it's still yours.
+            </p>
+          </section>
+        </article>
+
+        <article>
+          <header>
+            <h2>How to Actually Build That Judgment</h2>
+          </header>
+          <section>
+            <p>
+              Read more code than you write. Other people's code, open source projects,
+              code reviews — and yes, AI-generated code too. The more you read,
+              the faster you spot what's off.
+            </p>
+            <p>
+              Keep the fundamentals sharp. Performance, security, clean logic —
+              knowing these deeply is what lets you spot when AI gets it wrong.
+            </p>
+            <p>
+              And use AI on real projects, a lot. Not passively, but with intention.
+              The more contexts you work through, the better you get at knowing
+              which tool to reach for and when to trust it.
+            </p>
+          </section>
+        </article>
+
+        <article>
+          <header>
+            <h2>So What Kind of Developer Survives?</h2>
+          </header>
+          <section>
+            <p>
+              Not the one who codes faster than AI.
+              The one who knows when AI is wrong, understands what the team actually needs,
+              and never loses sight of why something is being built in the first place.
+            </p>
+          </section>
+        </article>
+      </>
+  },
+  {
     id: "vanilla-carousel-demo",
     category: "LAB",
     date: "19.01.26",
@@ -191,13 +260,20 @@ last 2 versions`}
 
             <p>
               *Autoprefixer Arguments:
-              <br/>
-              <strong>"$FilePath$" --use autoprefixer --use cssnano --replace --no-map</strong>
-              <br/><br/>
-              *Sass Compiler Arguments:
-              <br/>
-              <strong>--no-source-map --style=compressed $FileName$:$FileNameWithoutExtension$.min.css</strong>
             </p>
+            <pre>
+              <code>
+{`"$FilePath$" --use autoprefixer --use cssnano --replace --no-map`}
+              </code>
+            </pre>
+              <br/>
+            <p>*Sass Compiler Arguments:</p>
+            <pre>
+              <code>
+{`--no-source-map --style=compressed $FileName$:$FileNameWithoutExtension$.min.css`}
+              </code>
+            </pre>
+
           </section>
         </article>
       </>
@@ -446,28 +522,6 @@ counter(); // 3`}
           </code>
         </pre>
           </section>
-        </article>
-      </>
-  },
-  {
-    id: "how-to-survive",
-    category: "LIFE",
-    date: "15.12.25",
-    title: "How to Thrive (Not Just Survive) as a Frontend Developer in the AI Era",
-    content:
-      <>
-        <article>
-          <header>
-            <h2>Frontend Developer </h2>
-          </header>
-
-          <section></section>
-        </article>
-
-        <article>
-          <header></header>
-
-          <section></section>
         </article>
       </>
   },
