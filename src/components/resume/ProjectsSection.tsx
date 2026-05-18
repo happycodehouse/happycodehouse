@@ -1,6 +1,6 @@
 import React from "react";
 import BubbleBox from "./BubbleBox";
-import { projectsData } from "../../data/projectsData";
+import { projectsData } from "../../data/resume";
 import style from "../../pages/resume/resume.module.scss";
 
 interface ProjectsSectionProps {

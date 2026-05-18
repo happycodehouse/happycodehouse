@@ -94,38 +94,6 @@ $breakpoints: (
 }
 
 // ========================================
-// Ellipsis
-// ========================================
-@mixin ellipsis($lines: false, $font-size: null, $lh: null, $use: true) {
-  // 값이 없을 경우: 기본적으로 1줄 말줄임
-  // 값이 2이상일 경우:
-  // $font-size: em 계산으로 해당 font-size 필요
-  // $lh: line-height
-  // 해당하는 값만큼 말줄임 => @include ellipsis(3); // 3줄 말줄임
-
-  @if ($lines) {
-    // 여러 줄 말줄임
-    $em: math.div($lh, $font-size);
-
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: $lines;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    word-wrap: normal;
-    line-height: $em;
-    max-height: ($em * $lines) * 1em;
-  } @else {
-    // 한 줄 말줄임
-    overflow: hidden;
-    display: block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    word-wrap: normal;
-  }
-}
-
-// ========================================
 // PX TO VW (to vw)
 // ========================================
 @function to_vw($px-size) {
@@ -142,11 +110,11 @@ $breakpoints: (
   @if $minus > 0 {
     $size: string.unquote("calc(calc(#{$px-size}px * var(--base-ratio)) * -1)");
     $resultVw: string.unquote("calc(calc(calc(#{$px-size} / var(--base-size)) * var(--base-percent)) * -1)");
-    @return m#{$a}x(#{$resultVw});
+    @return max(#{$resultVw});
   } @else {
     $size: string.unquote("calc(#{$px-size}px * var(--base-ratio))");
     $resultVw: string.unquote("calc(calc(#{$px-size} / var(--base-size)) * var(--base-percent))");
-    @return m#{$a}x(#{$size}, #{$resultVw});
+    @return max(#{$resultVw});
   }
 }
 

@@ -98,7 +98,7 @@
 
   .title {
     font-family: $font-system;
-    @include fontSize(20, 30);
+    @include fontSize(18, 27);
     font-weight: 500;
     color: $color-neutral-500;
 
@@ -127,11 +127,11 @@
 
     .date {
       text-align: left;
-      @include fontSize(12, 24);
+      @include fontSize(12, 18);
     }
 
     .title {
-      @include fontSize(18, 24);
+      @include fontSize(16, 24);
 
       svg {
         fill: $font-color-default;

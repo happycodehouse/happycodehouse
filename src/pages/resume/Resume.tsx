@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import style from "./resume.module.scss";
 import FilterButtonGroup from "../../components/common/FilterButtonGroup";
 import ProjectsSection from "../../components/resume/ProjectsSection";
-import { languageData, personalInfo } from "../../data/commonData";
+import { languageData, personalInfo } from "../../data/common/commonData";
 
 const Resume = () => {
   const [isKorean, setIsKorean] = useState<boolean>(false);

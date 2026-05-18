@@ -11,7 +11,7 @@ import intellij_autoprefixer_img_03 from "../assets/images/feed/intellij-autopre
 
 export interface FeedItem {
   id: string;
-  category: "LAB" | "DEV" | "LIFE";
+  category: "LAB" | "DEV" | "NOTE";
   date: string;
   title: string;
   externalUrl?: string;
@@ -22,7 +22,7 @@ export interface FeedItem {
 export const feedData: FeedItem[] = [
   {
     id: "frontend-in-the-ai-era",
-    category: "LIFE",
+    category: "NOTE",
     date: "19.02.26",
     title: "Being a Frontend Developer When AI Writes the Code",
     content:
@@ -541,7 +541,7 @@ counter(); // 3`}
   },
   {
     id: "soul",
-    category: "LIFE",
+    category: "NOTE",
     date: "19.09.25",
     title: "I heard this story about a fish",
     content:
@@ -566,7 +566,7 @@ counter(); // 3`}
   },
   {
     id: "secret-santa",
-    category: "LIFE",
+    category: "NOTE",
     date: "18.09.25",
     title: "Flipping Secret Santa on Its Head",
     content:

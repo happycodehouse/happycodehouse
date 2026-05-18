@@ -37,15 +37,15 @@
     }
 
     span {
-      @include fontSize(12);
+      @include fontSize(10);
       font-weight: 600;
     }
 
     p {
-      @include fontSize(14);
+      @include fontSize(12);
 
       strong {
-        @include fontSize(15);
+        @include fontSize(14);
       }
     }
 
@@ -117,13 +117,13 @@
 
     a, span {
       width: fit-content;
-      @include fontSize(16);
+      @include fontSize(14);
       font-weight: 700;
     }
 
     li {
       margin-bottom: to_vw(4);
-      @include fontSize(12);
+      @include fontSize(10);
 
       &:last-child {
         margin-bottom: 0;
@@ -132,7 +132,7 @@
 
     @include media(false, tablet) {
       a, span {
-        @include fontSize(18);
+        @include fontSize(16);
       }
 
       ul {
@@ -140,7 +140,7 @@
       }
 
       li {
-        @include fontSize(13);
+        @include fontSize(12);
       }
     }
   }
@@ -148,7 +148,7 @@
   .descArea {
     .brief {
       @include wordBreak;
-      @include fontSize(13);
+      @include fontSize(12);
       padding-bottom: to_vw($space-200);
       border-bottom: 1px solid $border-300;
     }
@@ -156,12 +156,12 @@
     dl {
       dt {
         margin-bottom: to_vw(4);
-        @include fontSize(16);
+        @include fontSize(14);
         font-weight: 500;
       }
 
       dd {
-        @include fontSize(12);
+        @include fontSize(10);
       }
     }
 
@@ -173,7 +173,7 @@
         width: fit-content;
         padding-left: to_vw($space-200);
         margin-bottom: to_vw($space-100);
-        @include fontSize(14);
+        @include fontSize(12);
 
         &:last-child {
           margin-bottom: 0;
@@ -206,12 +206,12 @@
     @include media(false, tablet) {
       .brief {
         padding-bottom: to_vw($space-400);
-        @include fontSize(15);
+        @include fontSize(14);
       }
 
       ul {
         li {
-          @include fontSize(15);
+          @include fontSize(12);
         }
       }
 
@@ -223,7 +223,7 @@
         }
 
         dd {
-          @include fontSize(13);
+          @include fontSize(12);
           line-height: 1.5;
         }
       }

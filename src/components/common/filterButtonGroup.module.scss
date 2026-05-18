@@ -55,7 +55,7 @@
   z-index: 1;
   text-align: left;
   text-decoration: underline;
-  @include fontSize(16);
+  @include fontSize(14);
   font-weight: 500;
   opacity: 0.5;
   transition: all .4s;
@@ -88,7 +88,7 @@
   }
 
   @include media(false, tablet) {
-    @include fontSize(14);
+    @include fontSize(12);
     opacity: 1;
 
     &::before {

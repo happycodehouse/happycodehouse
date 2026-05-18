@@ -5,7 +5,7 @@ import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 
 import style from './view.module.scss';
-import { feedData } from '../../data/feedData';
+import { feedData } from '../../data/feed';
 
 import 'uikit/dist/css/uikit.min.css';
 

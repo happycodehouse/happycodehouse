@@ -185,14 +185,14 @@
     object-fit: cover;
   }
 
-  @include media(fasle, mobile) {
+  @include media(false, mobile) {
     width: 100%;
     height: auto;
   }
 }
 
 .uk-lightbox-items-fit > * > :not(iframe) {
-  @include media(fasle, mobile) {
+  @include media(false, mobile) {
     width: 100%;
     height: auto;
   }

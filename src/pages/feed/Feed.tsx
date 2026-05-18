@@ -5,7 +5,7 @@ import { PiArrowSquareOutBold } from "react-icons/pi";
 
 import style from "./feed.module.scss";
 import FilterButtonGroup from "../../components/common/FilterButtonGroup";
-import { feedData } from "../../data/feedData";
+import { feedData } from "../../data/feed";
 
 interface FeedItem {
   id: string | number;
@@ -21,11 +21,11 @@ interface ButtonData {
   label: string;
 }
 
-type FilterOption = "LAB" | "DEV" | "LIFE";
+type FilterOption = "LAB" | "DEV" | "NOTE";
 type SelectedFilter = "ALL" | FilterOption;
 
 const Feed: React.FC = () => {
-  const FILTER_OPTIONS: FilterOption[] = ["LAB", "DEV", "LIFE"];
+  const FILTER_OPTIONS: FilterOption[] = ["LAB", "DEV", "NOTE"];
   const [selectedFilter, setSelectedFilter] = useState<SelectedFilter>("ALL");
 
   const handleFilterClick = useCallback((filter: SelectedFilter) => {
@@ -87,7 +87,7 @@ const Feed: React.FC = () => {
                           rel="noopener noreferrer"
                         >
                           <span className={style.date}>{item.date}</span>
-                          <span className={style.title}>{item.title}<PiArrowSquareOutBold /></span>
+                          <span className={style.title}>{item.title}<PiArrowSquareOutBold/></span>
                         </a>
                       ) : (
                         <Link to={`/feed/${item.id}`}>
