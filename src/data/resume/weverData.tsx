@@ -28,8 +28,7 @@ export const weverData: CompanyProject = {
           { text: "Redesigned bilingual presidential websites" },
           { text: "Delivered responsive design + WCAG compliance" }
         ]
-      },
-      tags: ["#WCAG", "#ResponsiveDesign"]
+      }
     },
     {
       title: {
@@ -46,8 +45,7 @@ export const weverData: CompanyProject = {
           { text: "Built interactive data visualization for 100+ policy initiatives via API" },
           { text: "Built responsive, WCAG-compliant web solution" }
         ]
-      },
-      tags: ["#WCAG", "#ResponsiveDesign"]
+      }
     },
     {
       title: {
@@ -66,8 +64,7 @@ export const weverData: CompanyProject = {
           },
           { text: "Implemented responsive design architecture and provided ongoing technical support" }
         ]
-      },
-      tags: ["#ResponsiveDesign"]
+      }
     }
   ]
 };

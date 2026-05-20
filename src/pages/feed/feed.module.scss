@@ -20,98 +20,33 @@
   height: calc(100vh - to_vw(100));
 }
 
-.sectionTitle {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: to_vw($space-200);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: to_vw(28);
-  background: $background-color-pc;
-  padding: 0 to_vw($space-200) to_vw($space-100);
-  border-bottom: 1px solid $border-100;
-
-  span {
-    @include fontSize(10);
-    font-weight: 600;
-    line-height: 1;
-  }
-
-  @include media(false, tablet) {
-    background: $background-color-mo;
-  }
-}
-
 .feedList {
   overflow-y: auto;
-  height: calc(100% - to_vw(28));
-  margin-top: to_vw(28);
 
   li {
-    padding: 0 to_vw($space-200);
-
-    &:last-child {
-      padding-bottom: to_vw(28);
-      border-bottom: 0;
-    }
-
     a {
       display: flex;
-      justify-content: space-between;
-      gap: to_vw($space-200);
+      align-items: center;
+      justify-content: flex-start;
       position: relative;
-      padding: to_vw($space-200) 0;
-      text-align: right;
       text-decoration: unset;
-      border-bottom: 1px solid $border-300;
+      padding: 2px 0;
 
       @include media($from: tablet) {
         &:hover {
-          .date,
-          .title {
-            color: $font-color-default;
+          .date, .title {
+            color: #75a1dc;
           }
 
-          .title {
-            svg {
-              fill: $font-color-default;
-            }
+          svg {
+            fill: #75a1dc;
           }
         }
       }
     }
   }
 
-  .date,
-  .title {
-    transition: color .4s ease-in-out;
-  }
-
-  .date {
-    @include fontSize(10, 30);
-    color: $color-neutral-500;
-  }
-
-  .title {
-    font-family: $font-system;
-    @include fontSize(18, 27);
-    font-weight: 500;
-    color: $color-neutral-500;
-
-    svg {
-      margin-left: to_vw(4);
-      fill: $color-neutral-500;
-      transition: fill .4s ease-in-out;
-    }
-  }
-
   @include media(false, tablet) {
-    height: auto;
-
     li {
       a {
         &::before {
@@ -119,23 +54,56 @@
         }
       }
     }
+  }
+}
 
-    .date,
-    .title {
-      color: $font-color-default;
-    }
+.yearGroup {
+  padding: to_vw($space-100);
+}
 
-    .date {
-      text-align: left;
-      @include fontSize(12, 18);
-    }
+.yearLabel {
+  @include fontSize(12, 16);
+  color: $color-neutral-300;
 
-    .title {
-      @include fontSize(16, 24);
+}
 
-      svg {
-        fill: $font-color-default;
-      }
+.yearLabel,
+.date,
+.title {
+  transition: color .3s ease-in-out;
+  font-family: $font-system;
+  font-weight: 500;
+
+  @include media(false, tablet) {
+    color: $font-color-default;
+  }
+}
+
+.date {
+  width: to_vw(60);
+  @include fontSize(10, 15);
+  color: $color-neutral-400;
+
+  @include media(false, tablet) {
+    @include fontSize(12, 16);
+  }
+}
+
+.title {
+  @include fontSize(12, 16);
+  color: $color-neutral-500;
+
+  svg {
+    margin-left: to_vw(4);
+    fill: $color-neutral-500;
+    transition: fill .4s ease-in-out;
+  }
+
+  @include media(false, tablet) {
+    @include fontSize(16, 24);
+
+    svg {
+      fill: $font-color-default;
     }
   }
 }

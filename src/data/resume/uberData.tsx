@@ -13,7 +13,7 @@ export const uberData: CompanyProject = {
     period: "2023.09 - Present"
   },
   brief: {
-    kr: "디지털 에이전시에서 프론트엔드 개발자로 근무하며, 기업 웹사이트 구축 및 운영 업무를 담당하고 있습니다.",
+    kr: "디지털 에이전시에서 프론트엔드 개발자로 근무하며 기업 웹사이트 구축 및 운영을 담당하고 있습니다.",
     en: "Working as a Frontend Developer at a digital agency, responsible for corporate website development and maintenance."
   },
   projects: [
@@ -29,19 +29,16 @@ export const uberData: CompanyProject = {
       period: "2025.10 - 2025.12",
       details: {
         kr: [
-          { text: "공통 UI 컴포넌트 설계부터 페이지 단위 제작까지 전반적인 프론트엔드 구축 담당" },
-          { text: "반복 사용되는 컴포넌트를 스크립트로 자동화하여 개발 효율 및 유지보수성 향상" },
-          { text: "GSAP를 활용해 스크롤·트랜지션 기반 인터랙션을 구현하고 CI 콘텐츠의 흐름과 가독성 강화" },
-          { text: "공통 컴포넌트 구조 정비 및 코드 정리를 통해 개발 안정성을 확보하고 일정 내 오픈 달성" }
+          { text: "공통 UI 컴포넌트부터 페이지 단위까지 프론트엔드 전반 개발" },
+          { text: "GSAP 스크롤·전환 애니메이션으로 CI 콘텐츠 흐름 구현" },
+          { text: "스크립트 자동화를 통한 재사용 컴포넌트 구조 개선" }
         ],
         en: [
-          { text: "Led end-to-end front-end development from common UI components to page-level implementation" },
-          { text: "Automated reusable components with scripts to improve development efficiency and maintainability" },
-          { text: "Implemented GSAP-driven scroll and transition animations to enhance CI content flow and readability" },
-          { text: "Secured development stability and met the launch schedule by refining common component structure and codebase" }
+          { text: "End-to-end front-end development across common UI components and pages" },
+          { text: "GSAP scroll/transition animations for CI content" },
+          { text: "Automated reusable components with scripts for maintainability" }
         ]
-      },
-      tags: ["#GSAP", "#SCSS", "#ResponsiveDesign", "#Figma"]
+      }
     },
     {
       title: {
@@ -56,18 +53,15 @@ export const uberData: CompanyProject = {
       details: {
         kr: [
           { text: "공통 디자인 시스템 기반 CSS 컴포넌트 라이브러리 구축" },
-          { text: "디바이스별 차별화된 인터랙션 모션 구현 (모바일/PC 분리)", url: "https://dbhitek.com/kr/company/about" },
-          { text: "반응형 웹 디자인 및 크로스 브라우저 호환성 최적화" },
-          { text: "웹 접근성 가이드라인 준수 및 사용자 경험 개선" }
+          { text: "디바이스별 차별화된 GSAP 인터랙션 구현 (모바일/PC 분리)", url: "https://dbhitek.com/kr/company/about" },
+          { text: "반응형 웹 및 크로스 브라우저 호환성 최적화, 웹 접근성 준수" }
         ],
         en: [
           { text: "Built CSS component library based on unified design system" },
-          { text: "Implemented device-specific interaction animations (separate mobile/PC experiences)", url: "https://dbhitek.com/en/company/about" },
-          { text: "Optimized responsive web design and cross-browser compatibility" },
-          { text: "Enhanced user experience with web accessibility compliance" }
+          { text: "Separate mobile/PC GSAP interaction animations", url: "https://dbhitek.com/en/company/about" },
+          { text: "Responsive design with cross-browser compatibility and WCAG compliance" }
         ]
-      },
-      tags: ["#GSAP", "#SCSS", "#DesignSystem", "#ResponsiveDesign", "#Figma"]
+      }
     },
     {
       title: {
@@ -82,16 +76,13 @@ export const uberData: CompanyProject = {
       details: {
         kr: [
           { text: "CI 개편에 따른 웹사이트 전면 리뉴얼" },
-          { text: "디바이스별 차별화된 GSAP ScrollTrigger 인터랙션 구현 (모바일/PC 분리 제어)", video: xiElevatorMp4 },
-          { text: "반응형 웹 디자인 및 크로스 브라우저 호환성 구현" }
+          { text: "디바이스별 GSAP ScrollTrigger 인터랙션 분리 구현 (모바일/PC)", video: xiElevatorMp4 }
         ],
         en: [
-          { text: "Complete website redesign following CI renewal" },
-          { text: "Device-specific GSAP ScrollTrigger interactions with separate mobile/PC control logic", video: xiElevatorMp4 },
-          { text: "Responsive web design with cross-browser compatibility" }
+          { text: "Full website redesign following CI renewal" },
+          { text: "Device-specific GSAP ScrollTrigger interactions with separate mobile/PC logic", video: xiElevatorMp4 }
         ]
-      },
-      tags: ["#GSAP", "#SCSS", "#ResponsiveDesign", "#Figma"]
+      }
     },
     {
       title: {
@@ -105,17 +96,16 @@ export const uberData: CompanyProject = {
       period: "2024.12 - 2025.05",
       details: {
         kr: [
-          { text: "GSAP ScrollTrigger 활용한 뷰포트 인식 비디오/애니메이션 제어로 성능 최적화", url: "https://daesangwellife.com/kr/about-us/company/overview" },
-          { text: "재사용 가능한 디자인 시스템 및 컴포넌트 라이브러리 구축" },
+          { text: "GSAP ScrollTrigger 기반 뷰포트 연동 영상/애니메이션 제어", url: "https://daesangwellife.com/kr/about-us/company/overview" },
+          { text: "디자인 시스템 및 재사용 컴포넌트 라이브러리 구축" },
           { text: "반응형 디자인 및 크로스 브라우징 구현" }
         ],
         en: [
-          { text: "Optimized performance with GSAP ScrollTrigger for viewport-aware video/animation control", url: "https://daesangwellife.com/en/about-us/company/overview" },
-          { text: "Established design system and reusable component library for scalability" },
+          { text: "GSAP ScrollTrigger for viewport-aware video/animation control", url: "https://daesangwellife.com/en/about-us/company/overview" },
+          { text: "Established design system and reusable component library" },
           { text: "Responsive design with cross-browser compatibility" }
         ]
-      },
-      tags: ["#GSAP", "#SCSS", "#DesignSystem", "#ResponsiveDesign", "#Figma"]
+      }
     },
     {
       title: {
@@ -129,17 +119,16 @@ export const uberData: CompanyProject = {
       period: "2024.07 - 2024.10",
       details: {
         kr: [
-          { text: "삼양그룹 12개 계열사 웹사이트 동시 CI 리뉴얼 (퍼블리싱 3인 협업)" },
-          { text: "국영문 폰트 차별화를 위한 타이포그래피 시스템 설계" },
-          { text: "레거시 코드 기반 효율적 CSS 관리 및 멀티 사이트 배포 전략 수립" }
+          { text: "삼양그룹 계열사 12개 사이트 CI 리뉴얼 (프론트엔드 3인)" },
+          { text: "국문/영문 폰트 분리 타이포그래피 시스템 설계" },
+          { text: "레거시 코드 기반 멀티 사이트 CSS 관리 및 배포 전략 수립" }
         ],
         en: [
           { text: "CI renewal across 12 Samyang Group subsidiary websites (3-person front-end team)" },
-          { text: "Typography system design for Korean/English font differentiation" },
-          { text: "Efficient CSS management and multi-site deployment strategy with legacy codebase" }
+          { text: "Typography system for Korean/English font differentiation" },
+          { text: "Multi-site CSS management and deployment strategy with legacy codebase" }
         ]
-      },
-      tags: ["#MultiSiteManagement", "#ResponsiveDesign"]
+      }
     },
     {
       title: {
@@ -153,13 +142,12 @@ export const uberData: CompanyProject = {
       period: "2024.04 - 2024.07",
       details: {
         kr: [
-          { text: "GSAP ScrollTrigger 연동 및 외부 컨트롤러 기반 커스텀 스와이퍼 구현", video: hanatourcompanyMp4 }
+          { text: "GSAP ScrollTrigger 연동 외부 컨트롤러 기반 커스텀 스와이퍼 구현", video: hanatourcompanyMp4 }
         ],
         en: [
-          { text: "Custom Swiper with GSAP ScrollTrigger integration and external content controller", video: hanatourcompanyMp4 }
+          { text: "Custom Swiper with GSAP ScrollTrigger and external content controller", video: hanatourcompanyMp4 }
         ]
-      },
-      tags: ["#GSAP", "#Swiper", "#SCSS", "#ResponsiveDesign"]
+      }
     },
     {
       title: {
@@ -173,13 +161,12 @@ export const uberData: CompanyProject = {
       period: "2023.12 - 2024.05",
       details: {
         kr: [
-          { text: "GSAP ScrollTrigger를 활용한 타임라인 인터랙션 애니메이션", video: samickthkMp4 }
+          { text: "GSAP ScrollTrigger 기반 타임라인 인터랙션 애니메이션 구현", video: samickthkMp4 }
         ],
         en: [
           { text: "Timeline interaction animation with GSAP ScrollTrigger", video: samickthkMp4 }
         ]
-      },
-      tags: ["#GSAP", "#SCSS", "#ResponsiveDesign"]
+      }
     },
     {
       title: {
@@ -193,49 +180,37 @@ export const uberData: CompanyProject = {
       period: "2023.09 - Present",
       details: {
         kr: [
-          {
-            text: <>SEM <a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> 기술 리소스 플랫폼 구축 및 운영</>
-          },
-          { text: "제품정보 카테고리 개편 및 사용자 경험 개선", url: "https://www.samsungsem.com/kr/product/module/camera-module/automotive-camera-modules.do" },
-          { text: "매년 웹 접근성 WCAG 2.1 AA 인증 갱신 (WebWatch 심사 통과)" },
-          { text: "뉴스레터 연간 리뉴얼 (멀티 플랫폼 호환성 95% 향상)" },
-          { text: "지속가능경영 카테고리 개편 및 인터랙티브 요소 구현", video: samsungMp4 },
-          { text: "푸른코끼리 갤러리 AJAX 기반 동적 로딩 시스템 구축 (페이지 로딩 속도 30% 개선)", url: "https://samsungsem.com/kr/bepuco/contest.do" }
+          { text: <><a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> 기술 리소스 플랫폼 구축 및 운영</> },
+          { text: "AJAX 동적 로딩 구현으로 페이지 로딩 속도 30% 개선", url: "https://samsungsem.com/kr/bepuco/contest.do" },
+          { text: "WCAG 2.1 AA 인증 연간 갱신 (WebWatch 심사)" },
+          { text: "지속가능경영 카테고리 인터랙티브 데이터 시각화 구현", video: samsungMp4 },
+          { text: "뉴스레터 월간 제작 및 발송 운영 (멀티 플랫폼 호환성 최적화)" }
         ],
         en: [
-          {
-            text: <>SEM <a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> Platform Development & Operations</>
-          },
-          { text: "Product Category Restructuring & UX Enhancement", url: "https://www.samsungsem.com/global/product/module/camera-module/automotive-camera-modules.do" },
-          { text: "Maintain WCAG 2.1 AA certification through annual WebWatch audits" },
-          { text: "Redesigned Annual Newsletter for multi-platform compatibility" },
+          { text: <><a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> Platform Development & Operations</> },
+          { text: "AJAX-based dynamic loading with 30% speed improvement", url: "https://samsungsem.com/kr/bepuco/contest.do" },
+          { text: "Maintained WCAG 2.1 AA certification through annual WebWatch audits" },
           { text: "Developed Sustainability Category with interactive data visualizations", video: samsungMp4 },
-          { text: "Implemented AJAX-based dynamic loading (30% speed improvement)", url: "https://samsungsem.com/kr/bepuco/contest.do" }
+          { text: "Monthly newsletter production and delivery with multi-platform compatibility" }
         ]
-      },
-      tags: ["#AJAX", "#WCAG", "#WebPerformance", "#AdaptiveDesign"]
+      }
     },
     {
       title: {
-        kr: "삼양 스페셜티/ 삼양 AM BU 사이트 유지운영",
+        kr: "삼양 스페셜티 / 삼양 AM BU 사이트 유지운영",
         en: <>Samyang Speciality / Samyang AM BU <br/> Website Maintenance</>
       },
       period: "2023.09 - Present",
       details: {
         kr: [
-          {
-            text: <><a href="https://samyangspecialty.com/kr/index" target="_blank" rel="noopener noreferrer">Samyang Specialty</a>/<a href="https://www.samyangep.com/kr/index" target="_blank" rel="noopener noreferrer">삼양사 AM BU</a> 홈페이지 통합 관리</>
-          },
-          { text: "정기적 콘텐츠 업데이트 및 기술적 유지보수" }
+          { text: <><a href="https://samyangspecialty.com/kr/index" target="_blank" rel="noopener noreferrer">Samyang Specialty</a> / <a href="https://www.samyangep.com/kr/index" target="_blank" rel="noopener noreferrer">삼양사 AM BU</a> 홈페이지 통합 관리</> },
+          { text: "정기적 콘텐츠 업데이트 및 기술 유지보수" }
         ],
         en: [
-          {
-            text: <><a href="https://samyangspecialty.com/en/index" target="_blank" rel="noopener noreferrer">Samyang Specialty</a> and <a href="https://www.samyangep.com/en/index" target="_blank" rel="noopener noreferrer">Samyang AM BU</a> Website Management</>
-          },
+          { text: <><a href="https://samyangspecialty.com/en/index" target="_blank" rel="noopener noreferrer">Samyang Specialty</a> and <a href="https://www.samyangep.com/en/index" target="_blank" rel="noopener noreferrer">Samyang AM BU</a> Website Management</> },
           { text: "Regular content updates and technical maintenance" }
         ]
-      },
-      tags: ["#SCSS", "#AdaptiveDesign"]
+      }
     }
   ]
 };

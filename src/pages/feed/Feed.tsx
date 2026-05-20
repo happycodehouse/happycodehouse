@@ -2,9 +2,9 @@ import React from "react";
 import { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { PiArrowSquareOutBold } from "react-icons/pi";
-
 import style from "./feed.module.scss";
 import FilterButtonGroup from "../../components/common/FilterButtonGroup";
+import { formatDate, getYear } from "../../utils/formatDate";
 import { feedData } from "../../data/feed";
 
 interface FeedItem {
@@ -35,6 +35,15 @@ const Feed: React.FC = () => {
   const filteredData = selectedFilter === "ALL"
     ? feedData
     : feedData.filter((item: FeedItem) => item.category === selectedFilter);
+
+  const groupedByYear = filteredData.reduce<Record<string, FeedItem[]>>((acc, item) => {
+    const year = getYear(item.date);
+    if (!acc[year]) acc[year] = [];
+    acc[year].push(item);
+    return acc;
+  }, {});
+
+  const sortedYears = Object.keys(groupedByYear).sort((a, b) => Number(b) - Number(a));
 
   const buttonData: ButtonData[] = [
     {
@@ -68,36 +77,35 @@ const Feed: React.FC = () => {
           </div>
           <div className="grid-box-right">
             <div className={style.feedArea}>
-              <div className={style.sectionTitle}>
-                <span className={style.date}>/ DD.MM.YY</span>
-                <span className={style.title}>/ TITLE</span>
-              </div>
               {noResults ? (
                 <div className={style.noResults}>
                   No posts found for the selected filter.
                 </div>
               ) : (
-                <ul className={style.feedList}>
-                  {filteredData.map((item: FeedItem) => (
-                    <li key={item.id}>
-                      {item.externalUrl ? (
-                        <a
-                          href={item.externalUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <span className={style.date}>{item.date}</span>
-                          <span className={style.title}>{item.title}<PiArrowSquareOutBold/></span>
-                        </a>
-                      ) : (
-                        <Link to={`/feed/${item.id}`}>
-                          <span className={style.date}>{item.date}</span>
-                          <span className={style.title}>{item.title}</span>
-                        </Link>
-                      )}
-                    </li>
+                <div className={style.feedList}>
+                  {sortedYears.map((year) => (
+                    <div key={year} className={style.yearGroup}>
+                      <span className={style.yearLabel}>{year}</span>
+                      <ul>
+                        {groupedByYear[year].map((item: FeedItem) => (
+                          <li key={item.id}>
+                            {item.externalUrl ? (
+                              <a href={item.externalUrl} target="_blank" rel="noopener noreferrer">
+                                <span className={style.date}>{formatDate(item.date)}</span>
+                                <span className={style.title}>{item.title}<PiArrowSquareOutBold/></span>
+                              </a>
+                            ) : (
+                              <Link to={`/feed/${item.id}`}>
+                                <span className={style.date}>{formatDate(item.date)}</span>
+                                <span className={style.title}>{item.title}</span>
+                              </Link>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   ))}
-                </ul>
+                </div>
               )}
             </div>
           </div>

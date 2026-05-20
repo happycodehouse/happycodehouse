@@ -27,7 +27,9 @@ $gridMargin: 50;
 // Color
 $color-white: #ffffff;
 $color-black: #0a0a0a;
+$color-green: oklch(70% 0.2155 150deg);
 $color-blue: #caecff;
+$color-blue-accent: oklch(55% 0.2308 256.91deg);
 $color-neutral-50: #fafafa;
 $color-neutral-100: #f5f5f5;
 $color-neutral-200: #e5e5e5;
@@ -38,6 +40,7 @@ $color-neutral-600: #525252;
 $color-neutral-700: #404040;
 $color-neutral-800: #262626;
 $color-neutral-900: #171717;
+
 
 // Space
 $space-50: 3;

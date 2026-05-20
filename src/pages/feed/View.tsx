@@ -6,6 +6,7 @@ import Icons from 'uikit/dist/js/uikit-icons';
 
 import style from './view.module.scss';
 import { feedData } from '../../data/feed';
+import { formatDateFull } from "../../utils/formatDate";
 
 import 'uikit/dist/css/uikit.min.css';
 
@@ -29,8 +30,8 @@ const View = () => {
           <div className={style.viewHeader}>
             <div className={style.date}>
               <span>/</span>
-              <Link to="/feed">Feed</Link>
-              <span>/{post.date}</span>
+              <Link to="/feed"> Feed</Link>
+              <span>/ {formatDateFull(post.date)}</span>
             </div>
             <h1>{post.title}</h1>
           </div>
