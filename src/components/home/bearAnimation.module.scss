@@ -1,14 +1,15 @@
 @charset "UTF-8";
+@use "../../styles/base/font" as *;
 @use "../../styles/base/variable" as *;
 @use "../../styles/base/mixin" as *;
 
-$default-mass-img-size: 74;
+$default-mass-img-size: 74px;
 
 .wrap {
   overflow: hidden;
   position: relative;
-  width: to_vw(530);
-  min-height: to_vw(220);
+  width: 530px;
+  min-height: 220px;
   height: 100%;
 }
 
@@ -43,61 +44,55 @@ $default-mass-img-size: 74;
 }
 
 .massItem {
-  &01 {
-    display: none;
-  }
+  &01 { display: none; }
 
   &02 {
     top: -20%;
     left: 50%;
-    width: to_vw(48);
+    width: 48px;
   }
 
   &03 {
     left: 20.5%;
     top: 48%;
-    width: to_vw(48);
+    width: 48px;
     transform: rotate(6deg);
   }
 
-  &04 {
-    display: none;
-  }
+  &04 { display: none; }
 
   &05 {
     top: -10%;
     right: 10%;
-    width: to_vw($default-mass-img-size);
+    width: $default-mass-img-size;
     z-index: -1;
   }
 
   &06 {
     right: -8%;
     top: 0;
-    width: to_vw($default-mass-img-size);
+    width: $default-mass-img-size;
   }
 
   &07 {
     right: 12%;
     bottom: -6%;
     z-index: 2;
-    width: to_vw(88);
+    width: 88px;
   }
 
   &08 {
     right: 18%;
     bottom: 48%;
-    width: to_vw(28);
+    width: 28px;
   }
 
-  &09 {
-    display: none;
-  }
+  &09 { display: none; }
 
   &10 {
     left: 2%;
     bottom: 0;
-    width: to_vw($default-mass-img-size);
+    width: $default-mass-img-size;
   }
 }
 
@@ -109,41 +104,23 @@ $default-mass-img-size: 74;
 }
 
 @include media(false, mobile) {
-  $default-mass-img-size: 48;
+  $default-mass-img-size: 48px;
 
   .wrap {
     height: 20vh;
   }
 
   .massItem {
-    &02 {
-      display: none;
-    }
-
-    &03 {
-      width: to_vw(36);
-    }
-
-    &05 {
-      width: to_vw($default-mass-img-size);
-    }
-
-    &06 {
-      width: to_vw($default-mass-img-size);
-    }
-
-    &07 {
-      width: to_vw($default-mass-img-size);
-    }
-
+    &02 { display: none; }
+    &03 { width: 36px; }
+    &05 { width: $default-mass-img-size; }
+    &06 { width: $default-mass-img-size; }
+    &07 { width: $default-mass-img-size; }
     &08 {
       right: 17%;
       bottom: 30%;
-      width: to_vw(20);
+      width: 20px;
     }
-
-    &10 {
-      width: to_vw($default-mass-img-size);
-    }
+    &10 { width: $default-mass-img-size; }
   }
 }

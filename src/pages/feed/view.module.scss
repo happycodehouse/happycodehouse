@@ -1,55 +1,66 @@
 @charset "UTF-8";
-
 @use "../../styles/base/font" as *;
 @use "../../styles/base/variable" as *;
 @use "../../styles/base/mixin" as *;
 
 .viewWrapper {
-  width: calc((100vw / 3) - to_vw(12));
-  padding: to_vw(8) 0 to_vw($space-2000);
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
 
   @include media(false, tablet) {
     width: 100%;
-    padding: to_vw(12) to_vw(12) to_vw($space-2000);
+    padding: 12px 12px 120px;
   }
 }
 
-.viewHeader {
-  padding: to_vw($space-100) 0 to_vw($space-600);
-  margin-bottom: to_vw($space-600);
-  border-bottom: 1px solid $border-300;
+.viewNav {
+  height: 100px;
+  padding: 0 6px;
+  border-bottom: 1px solid $border-subtle;
 
-  .date {
-    margin-bottom: to_vw($space-1000);
+  a {
+    font-size: 64px;
+    line-height: .8;
+    color: $text-disabled;
 
-    span {
-      @include fontSize(12);
-      font-weight: 400;
-    }
-
-    a {
-      text-decoration: underline;
-      @include fontSize(14);
-      font-weight: 700;
+    &:hover {
+      color: $color-highlight;
     }
   }
+}
+
+.viewMeta {
+  border: 1px solid red;
 
   h1 {
-    font-family: $font-system;
-    @include fontSize(20, 24);
     font-weight: 500;
+    font-size: 24px;
   }
+
+  span {}
 }
 
 .viewBody {
+  overflow-y: auto;
+  height: 100vh;
+  padding: 6px 0 120px;
+  border-left: 1px solid $border-subtle;
+}
+
+.viewContent {
+  width: 44%;
+
+  @include media(false, tablet) {
+    width: 100%;
+  }
+
   article {
     & + article {
-      margin-top: to_vw($space-1000);
+      margin-top: 60px;
     }
 
     p {
-      @include fontSize(14, 21);
+      font-size: 13px;
 
       strong {
         display: initial;
@@ -57,18 +68,8 @@
     }
   }
 
-  header {
-    > * {
-      padding-left: to_vw(12);
-    }
-  }
-
   section {
-    margin-top: to_vw($space-700);
-
-    > * {
-      padding-left: to_vw(12);
-    }
+    margin-top: 12px;
 
     h3 {
       position: relative;
@@ -76,11 +77,11 @@
       &::before {
         content: '';
         position: absolute;
-        top: to_vw(6);
+        top: 6px;
         left: 0;
-        width: to_vw(3);
+        width: 3px;
         height: 50%;
-        background: $color-neutral-400;
+        background: $text-subtle;
         opacity: .2;
       }
     }
@@ -88,47 +89,49 @@
 
   h2 {
     position: relative;
-    padding-left: to_vw(12);
-    @include fontSize(18, 27);
-    font-weight: 700;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    color: $text-secondary;
 
     &::before {
       content: '';
       position: absolute;
-      top: 0;
+      top: 10px;
       left: 0;
-      width: to_vw(4);
-      height: 100%;
-      background: $color-blue;
+      width: 4px;
+      height: 10px;
+      background: $color-highlight;
     }
 
     & + * {
-      margin: to_vw($space-200) 0;
+      margin: 12px 0;
     }
   }
 
   h3 {
-    @include fontSize(16, 24);
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-muted;
 
     & + * {
-      margin: to_vw($space-200) 0;
+      margin: 12px 0;
     }
   }
 
   strong {
     display: block;
-    margin: to_vw($space-200) 0;
-    @include fontSize(14, 21);
+    margin: 12px 0;
+    font-size: 13px;
   }
 
   .itemList {
-    margin: to_vw($space-100) 0;
+    margin: 12px;
 
     li {
       position: relative;
-      padding-left: to_vw(12);
-      @include fontSize(14, 21);
+      padding-left: 12px;
+      font-size: 13px;
 
       strong {
         display: initial;
@@ -144,39 +147,36 @@
   }
 
   pre {
-    width: calc(100% - to_vw($space-400));
-    padding: to_vw($space-200);
-    margin: to_vw($space-200) auto to_vw($space-500);
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 12px 0 30px;
     white-space: pre;
-
-    @include media(false, tablet) {
-      @include fontSize(12, 21);
-    }
+    font-size: 12px;
   }
 }
 
 .txtBox {
-  padding: 0 to_vw(4);
-  margin: 0 to_vw(2);
-  border: 1px solid #ddd;
+  padding: 0 4px;
+  margin: 0 2px;
+  border: 1px solid $border-default;
   border-radius: 4px;
-  background: #efefef;
-  font-weight: 600;
-  color: #75a1dc;
+  background: $bg-muted;
+  font-weight: 500;
+  color: $color-accent;
 }
 
 .imgBox {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: to_vw($space-100);
+  gap: 6px;
   width: 100%;
-  margin: to_vw($space-600) 0;
+  margin: 36px 0;
 
   a {
     overflow: hidden;
     aspect-ratio: 1 / 1;
-    border: 1px solid $border-200;
-    border-radius: to_vw(4);
+    border: 1px solid $border-default;
+    border-radius: 4px;
   }
 
   img {

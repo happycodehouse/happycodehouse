@@ -6,7 +6,7 @@
 .gridItem {
   overflow: hidden;
   position: relative;
-  background: $color-neutral-100;
+  background: $bg-muted;
 
   > div {
     position: relative;
@@ -22,7 +22,7 @@
       &:hover {
         .desc {
           * {
-            color: $color-neutral-400;
+            color: $text-subtle;
           }
         }
       }
@@ -31,12 +31,13 @@
     > span {
       position: relative;
       z-index: 1;
-      @include fontSize(48);
+      font-family: $font-suit;
+      font-size: 48px;
     }
   }
 
   @include media(false, tablet) {
-    background: $color-neutral-50;
+    background: $bg-subtle;
   }
 }
 
@@ -53,13 +54,13 @@
 
     * {
       transition: color .4s cubic-bezier(.25, .46, .45, .94);
-      @include fontSize(14);
-      color: $color-neutral-100;
+      font-size: 14px;
+      color: $bg-muted;
     }
 
     .title {
       display: flex;
-      gap: to_vw($space-50);
+      gap: 3px;
     }
   }
 
@@ -74,14 +75,14 @@
       align-items: center;
       justify-content: space-between;
       position: static;
-      padding: to_vw($space-50) to_vw($space-100);
+      padding: 3px 6px;
 
       em {
         order: 2;
       }
 
       * {
-        color: $color-black;
+        color: $text-default;
       }
     }
 

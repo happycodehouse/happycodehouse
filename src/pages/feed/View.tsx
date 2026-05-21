@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router-dom';
 import UIkit from 'uikit';
@@ -15,11 +14,11 @@ UIkit.use(Icons);
 const View = () => {
   const {id} = useParams();
   const post = feedData.find(item => item.id === id);
-  
+
   if (!post) {
     return <div>Post not found.</div>;
   }
-  
+
   return (
     <>
       <Helmet>
@@ -27,16 +26,20 @@ const View = () => {
       </Helmet>
       <div className="container">
         <div className={style.viewWrapper}>
-          <div className={style.viewHeader}>
-            <div className={style.date}>
-              <span>/</span>
-              <Link to="/feed"> Feed</Link>
-              <span>/ {formatDateFull(post.date)}</span>
-            </div>
-            <h1>{post.title}</h1>
+          <div className={style.viewNav}>
+            <Link to="/feed">/Feed</Link>
           </div>
           <div className={style.viewBody}>
-            {post.content}
+            <div className={style.viewMeta}>
+              <h1>{post.title}</h1>
+              <div>
+                <span>{post.category}</span>
+                <span>{formatDateFull(post.date)}</span>
+              </div>
+            </div>
+            <div className={style.viewContent}>
+              {post.content}
+            </div>
           </div>
         </div>
       </div>

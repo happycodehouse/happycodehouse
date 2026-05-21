@@ -6,7 +6,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid $border-100;
+  border-bottom: 1px solid $border-subtle;
 
   @include media($from: tablet) {
     &:hover {
@@ -19,8 +19,8 @@
   }
 
   @include media(false, tablet) {
-    border-top: 1px solid $border-500;
-    border-bottom: 1px solid $border-500;
+    border-top: 1px solid $border-dark;
+    border-bottom: 1px solid $border-dark;
   }
 }
 
@@ -29,20 +29,20 @@
   position: relative;
 
   &:nth-of-type(odd) {
-    border-right: 1px solid $border-100;
+    border-right: 1px solid $border-subtle;
   }
 
   &:nth-of-type(n+3) {
-    border-top: 1px solid $border-100;
+    border-top: 1px solid $border-subtle;
   }
 
   @include media(false, tablet) {
     &:nth-child(odd) {
-      border-right: 1px solid $border-500;
+      border-right: 1px solid $border-dark;
     }
 
     &:nth-child(n+3) {
-      border-top: 1px solid $border-500;
+      border-top: 1px solid $border-dark;
     }
   }
 }
@@ -55,10 +55,10 @@
   z-index: 1;
   text-align: left;
   text-decoration: underline;
-  @include fontSize(14);
-  font-weight: 500;
   opacity: 0.5;
   transition: all .4s;
+  font-size: 14px;
+  font-weight: 500;
 
   &::before {
     content: '';
@@ -67,9 +67,8 @@
   }
 
   &.selected {
-    background: $color-neutral-100;
+    background: $bg-muted;
     opacity: 1;
-    font-weight: 700;
   }
 
   .buttonText {
@@ -78,7 +77,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: to_vw($space-100);
+    padding: 6px;
+    font-family: $font-suit;
   }
 
   @include media($from: tablet) {
@@ -88,7 +88,7 @@
   }
 
   @include media(false, tablet) {
-    @include fontSize(12);
+    font-size: 12px;
     opacity: 1;
 
     &::before {
@@ -96,15 +96,15 @@
     }
 
     &.selected {
-      background: $font-color-default;
+      background: $text-default;
 
       .buttonText {
-        color: $background-color-mo;
+        color: $bg-subtle;
       }
     }
 
     .buttonText {
-      padding-left: to_vw($space-200);
+      padding-left: 12px;
     }
   }
 }

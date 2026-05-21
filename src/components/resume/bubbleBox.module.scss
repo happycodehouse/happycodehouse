@@ -10,15 +10,15 @@
     &.video {
       .bubbleContent {
         top: unset;
-        right: to_vw($space-200);
-        bottom: to_vw($space-200);
+        right: 12px;
+        bottom: 12px;
         left: unset;
         position: fixed;
         transform: unset;
         transform-origin: right bottom;
 
         video {
-          width: to_vw(500);
+          width: 500px;
           height: auto;
           object-fit: cover;
         }
@@ -30,12 +30,12 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: calc(100% + to_vw($space-100));
+    left: calc(100% + 6px);
     z-index: 1;
     white-space: nowrap;
-    padding: to_vw($space-100) to_vw($space-200);
-    border-radius: to_vw(8);
-    background: $color-black;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: $text-default;
     box-shadow: 0 3px 8px 0 rgba(10, 10, 10, 0.2);
     scale: 0;
     transition: scale .5s ease-in-out;
@@ -48,11 +48,11 @@
     .inner {
       display: flex;
       flex-direction: column;
-      gap: to_vw(4);
+      gap: 4px;
     }
 
     a {
-      color: $color-white;
+      color: $text-inverse;
       font-size: 12px;
       font-weight: 400;
       transition: opacity .2s ease-in-out;
@@ -67,10 +67,10 @@
     &Content {
       position: fixed;
       top: unset;
-      right: to_vw($space-200);
-      bottom: to_vw($space-200);
+      right: 12px;
+      bottom: 12px;
       left: unset;
-      width: calc(100% - #{to_vw($space-400)});
+      width: calc(100% - 24px);
       transform: unset;
       transform-origin: right bottom;
     }

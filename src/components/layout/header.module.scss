@@ -10,22 +10,21 @@
   }
 
   .logo {
-    height: to_vw(100);
-    padding: 0 to_vw($space-100);
-    border-bottom: 1px solid $border-100;
-    font-family: $font-system;
-    @include fontSize(64);
+    height: 100px;
+    padding: 0 6px;
+    border-bottom: 1px solid $border-subtle;
+    font-size: 64px;
     line-height: .8;
   }
 
   .nav {
-    border-left: 1px solid $border-100;
+    border-left: 1px solid $border-subtle;
 
     li {
       overflow: hidden;
       position: relative;
-      height: to_vw(50);
-      border-bottom: 1px solid $border-100;
+      height: 50px;
+      border-bottom: 1px solid $border-subtle;
       text-align: right;
 
       a {
@@ -33,17 +32,17 @@
         z-index: 1;
         display: block;
         height: 100%;
-        padding: 0 to_vw($space-100);
-        text-decoration: underline;
-        @include fontSize(32);
-        font-weight: 500;
-        line-height: 1.5;
-        color: $color-neutral-200;
+        padding: 0 6px;
         transition: color .4s cubic-bezier(.25, .46, .45, .94);
+        text-decoration: underline;
+        font-size: 32px;
+        font-weight: 500;
+        font-family: $font-suit;
+        color: $text-disabled;
 
         @include media($from: tablet) {
           &:hover {
-            color: $color-black;
+            color: $text-default;
           }
         }
       }
@@ -53,21 +52,20 @@
   @include media(false, tablet) {
     .inner {
       align-items: flex-end;
-      padding: to_vw($space-200);
+      padding: 12px;
     }
 
     .logo {
       height: auto;
       padding: 0;
       border-bottom: 0;
-      @include fontSize(56);
-      line-height: 1;
+      font-size: 56px;
     }
 
     .nav {
       display: flex;
       flex-direction: column;
-      gap: to_vw($space-100);
+      gap: 6px;
       border-left: 0;
 
       li {
@@ -76,9 +74,9 @@
 
         a {
           padding: 0;
-          @include fontSize(16);
-          font-weight: 700;
-          color: $font-color-default;
+          font-size: 16px;
+          font-weight: 500;
+          color: $text-default;
         }
       }
     }

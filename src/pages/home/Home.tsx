@@ -95,7 +95,7 @@ const Home = () => {
   }, [gridItems]);
   
   return (
-    <div id="container">
+    <div className="container">
       <div className={style.gridWrapper}>
         {gridItems.map((item, index) => {
           if (!item) return <div key={`empty-${index}`}></div>;

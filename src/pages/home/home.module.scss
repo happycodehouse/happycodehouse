@@ -10,15 +10,15 @@ $gridCnt: 4;
   grid-template-columns: repeat($gridCnt, 1fr);
   grid-template-rows: auto;
   height: 100vh;
-  background: $color-neutral-50;
+  background: $bg-subtle;
 
   a:hover {
     text-decoration: unset;
   }
 
   > div {
-    border-right: 1px solid $border-200;
-    border-bottom: 1px solid $border-200;
+    border-right: 1px solid $border-default;
+    border-bottom: 1px solid $border-default;
 
     @include media($from: tablet) {
       &:nth-child(#{$gridCnt}n) {
@@ -38,7 +38,7 @@ $gridCnt: 4;
 
     > div {
       border-right: 0;
-      border-bottom: 1px solid $border-500;
+      border-bottom: 1px solid $border-dark;
     }
   }
 }

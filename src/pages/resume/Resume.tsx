@@ -14,7 +14,7 @@ const Resume = () => {
   }, []);
 
   return (
-    <div id="container">
+    <div className="container">
       <div className={style.resumeWrapper}>
         <div className="grid-box">
           <div className="grid-box-left">

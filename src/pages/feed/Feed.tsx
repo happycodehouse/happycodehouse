@@ -65,7 +65,7 @@ const Feed: React.FC = () => {
   const noResults = filteredData.length === 0;
 
   return (
-    <div id="container">
+    <div className="container">
       <div className={style.feedWrapper}>
         <div className="grid-box">
           <div className={`${style.gridBoxLeft} grid-box-left`}>

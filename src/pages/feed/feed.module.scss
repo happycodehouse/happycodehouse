@@ -3,11 +3,8 @@
 @use "../../styles/base/variable" as *;
 @use "../../styles/base/mixin" as *;
 
-.feedWrapper {
-}
-
 .gridBoxLeft {
-  height: calc(100vh - to_vw(100));
+  height: calc(100vh - 100px);
 
   @include media(false, tablet) {
     height: auto;
@@ -17,7 +14,7 @@
 .feedArea {
   overflow: hidden;
   position: relative;
-  height: calc(100vh - to_vw(100));
+  height: calc(100vh - 100px);
 }
 
 .feedList {
@@ -35,11 +32,11 @@
       @include media($from: tablet) {
         &:hover {
           .date, .title {
-            color: #75a1dc;
+            color: $color-accent;
           }
 
           svg {
-            fill: #75a1dc;
+            fill: $color-accent;
           }
         }
       }
@@ -50,7 +47,7 @@
     li {
       a {
         &::before {
-          background: $border-300;
+          background: $border-strong;
         }
       }
     }
@@ -58,58 +55,56 @@
 }
 
 .yearGroup {
-  padding: to_vw($space-100);
+  padding: 6px;
 }
 
 .yearLabel {
-  @include fontSize(12, 16);
-  color: $color-neutral-300;
-
+  font-size: 12px;
+  color: $text-disabled;
 }
 
 .yearLabel,
 .date,
 .title {
   transition: color .3s ease-in-out;
-  font-family: $font-system;
   font-weight: 500;
 
   @include media(false, tablet) {
-    color: $font-color-default;
+    color: $text-default;
   }
 }
 
 .date {
-  width: to_vw(60);
-  @include fontSize(10, 15);
-  color: $color-neutral-400;
+  width: 60px;
+  font-size: 12px;
+  color: $text-subtle;
 
   @include media(false, tablet) {
-    @include fontSize(12, 16);
+    font-size: 12px;
   }
 }
 
 .title {
-  @include fontSize(12, 16);
-  color: $color-neutral-500;
+  font-size: 12px;
+  color: $text-muted;
 
   svg {
-    margin-left: to_vw(4);
-    fill: $color-neutral-500;
+    margin-left: 4px;
+    fill: $text-muted;
     transition: fill .4s ease-in-out;
   }
 
   @include media(false, tablet) {
-    @include fontSize(16, 24);
+    font-size: 16px;
 
     svg {
-      fill: $font-color-default;
+      fill: $text-default;
     }
   }
 }
 
 .noResults {
-  padding: to_vw($space-400);
+  padding: 24px;
   text-align: center;
   font-style: italic;
   opacity: 0.7;

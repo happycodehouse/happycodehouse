@@ -2,44 +2,27 @@
 @use "base/variable" as *;
 @use "base/mixin" as *;
 
-// ========================================
-// Box Model & Global Styles
-// ========================================
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: $font-suit;
-  color: $font-color-default;
+  font-family: $font-system;
+  line-height: 1.5;
+  color: $text-default;
 }
 
 html {
   --window-w: 100vw;
   --window-h: 100vh;
-  background: $background-color-pc;
+  background: $bg-default;
   font-size: 18px;
 
   @include media(false, tablet) {
-    background: $background-color-mo;
+    background: $bg-subtle;
   }
 }
 
 :root {
-  --base-ratio: 0.75;
-  --base-size: 1536;
-  --base-percent: 100vw;
-
-  // UIkit
   --lightbox-icon-color: #000;
-
-  @include media(false, tablet) {
-    --base-ratio: 1;
-    --base-size: 1;
-    --base-percent: 1px;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-suit;
 }
 
 .flex {
@@ -51,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 1fr 3fr;
 
   &-left {
-    border-right: 1px solid $border-100;
+    border-right: 1px solid $border-subtle;
   }
 
   @include media(false, tablet) {
@@ -60,38 +43,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .border-bottom {
-  border-bottom: 1px solid $border-100;
+  border-bottom: 1px solid $border-subtle;
 
   @include media(false, tablet) {
-    border-bottom: 1px solid $border-500;
+    border-bottom: 1px solid $border-dark;
   }
 }
 
-strong {
-  font-weight: 700;
+strong, b {
+  font-weight: 500;
 }
 
 .gradient-animation {
   animation: gradient-animation 3s linear infinite;
-  background-image: linear-gradient(to left, #525252 0%, #75a1dc 51%, #737373  100%);
+  background-image: linear-gradient(to left, #525252 0%, $color-accent 51%, #737373 100%);
   background-clip: text;
   background-size: 200% auto;
-  font-weight: 700;
+  font-weight: 500;
   color: transparent;
 }
 
 @keyframes gradient-animation {
-  0% {
-    background-position: 0 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0 50%;
-  }
+  0%   { background-position: 0 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
 }
 
 .overlay {
@@ -103,7 +78,7 @@ strong {
   z-index: 1;
   width: 100%;
   height: 100%;
-  background: #f5f5f5;
+  background: $bg-muted;
   transition: all .4s cubic-bezier(.25, .46, .45, .94);
   opacity: 0;
 
@@ -114,7 +89,7 @@ strong {
 
 .uk-lightbox {
   background: transparent;
-  backdrop-filter:blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .uk-icon:not(.uk-preserve) [stroke*="#"]:not(.uk-preserve) {
@@ -126,15 +101,15 @@ strong {
 }
 
 .uk-close {
-  padding: to_vw(8);
-  backdrop-filter:blur(10px);
+  padding: 8px;
+  backdrop-filter: blur(10px);
 }
 
 .scroll-to-top-button {
   position: fixed;
-  right: to_vw(12);
-  bottom: to_vw(12);
-  width: to_vw(20);
+  right: 12px;
+  bottom: 12px;
+  width: 20px;
   opacity: .1;
   transition: opacity .1s ease-in-out;
 
@@ -144,7 +119,7 @@ strong {
   }
 
   &--view {
-    right: calc(50% - to_vw(325));
+    right: calc(50% - 325px);
   }
 
   &:hover {
@@ -153,7 +128,7 @@ strong {
 
   @include media(false, tablet) {
     &--view {
-      right: to_vw(12);
+      right: 12px;
     }
   }
 }
