@@ -36,24 +36,20 @@
     }
 
     span {
-      font-family: $font-suit;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 500;
     }
 
     p {
-      font-size: 12px;
+      font-size: 13px;
 
       strong {
         font-size: 14px;
       }
     }
 
-    .iconWrap {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 6px;
+    a {
+      display: block;
     }
 
     @include media(false, tablet) {
@@ -122,10 +118,10 @@
     }
 
     li {
-      margin-bottom: 4px;
-      font-size: 12px;
+      font-size: 13px;
 
       &:last-child {
+        font-size: 12px;
         margin-bottom: 0;
       }
     }
@@ -140,7 +136,7 @@
       }
 
       li {
-        font-size: 12px;
+        font-size: 13px;
       }
     }
   }
@@ -148,7 +144,7 @@
   .descArea {
     .brief {
       @include wordBreak;
-      font-size: 12px;
+      font-size: 13px;
       padding-bottom: 12px;
       border-bottom: 1px solid $border-strong;
     }
@@ -173,7 +169,7 @@
         width: fit-content;
         padding-left: 12px;
         margin-bottom: 6px;
-        font-size: 12px;
+        font-size: 13px;
 
         &:last-child {
           margin-bottom: 0;
@@ -198,7 +194,7 @@
       span {
         padding: 2px 4px;
         border: 1px solid $text-muted;
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 500;
       }
     }
@@ -211,7 +207,7 @@
 
       ul {
         li {
-          font-size: 12px;
+          font-size: 13px;
         }
       }
 
@@ -223,7 +219,7 @@
         }
 
         dd {
-          font-size: 12px;
+          font-size: 13px;
         }
       }
     }

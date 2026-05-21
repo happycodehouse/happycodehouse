@@ -4,12 +4,22 @@
     src: url("/src/assets/fonts/SUIT-Variable.woff2") format("woff2-variations");
     font-family: "SUIT Variable";
     font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     src: url("/src/assets/fonts/GoogleSansCode-VariableFont_wght.woff2") format("woff2-variations");
     font-family: "Google Sans Code";
     font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src: url("/src/assets/fonts/PretendardVariable.woff2") format("woff2");
+    font-family: "Pretendard Variable";
+    font-weight: 45 920;
     font-style: normal;
     font-display: swap;
 }
@@ -39,4 +49,3 @@
     font-style: italic;
     font-display: swap;
 }
-

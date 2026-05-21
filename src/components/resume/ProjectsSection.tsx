@@ -86,7 +86,18 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isKorean }) => {
                       isKorean ? project.title.kr : project.title.en
                     )}
                   </dt>
-                  <dd>{project.period}</dd>
+                  <dd>
+                    {project.type === "maintenance"
+                      ? "Ongoing Maintenance"
+                      : Array.isArray(project.period)
+                        ? project.period.map((p, i) => (
+                          <React.Fragment key={i}>
+                            {p}{i < project.period!.length - 1 && <br/>}
+                          </React.Fragment>
+                        ))
+                        : project.period
+                    }
+                  </dd>
                 </dl>
 
                 <div>

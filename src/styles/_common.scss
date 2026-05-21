@@ -5,7 +5,7 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: $font-system;
+  font-family: $font-pretendard;
   line-height: 1.5;
   color: $text-default;
 }
@@ -57,6 +57,7 @@ strong, b {
 .gradient-animation {
   animation: gradient-animation 3s linear infinite;
   background-image: linear-gradient(to left, #525252 0%, $color-accent 51%, #737373 100%);
+  // noinspection CssInvalidPropertyValue
   background-clip: text;
   background-size: 200% auto;
   font-weight: 500;

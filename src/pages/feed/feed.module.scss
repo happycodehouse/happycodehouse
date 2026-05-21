@@ -4,7 +4,7 @@
 @use "../../styles/base/mixin" as *;
 
 .gridBoxLeft {
-  height: calc(100vh - 100px);
+  height: calc(100vh - $header-height);
 
   @include media(false, tablet) {
     height: auto;
@@ -14,7 +14,7 @@
 .feedArea {
   overflow: hidden;
   position: relative;
-  height: calc(100vh - 100px);
+  height: calc(100vh - $header-height);
 }
 
 .feedList {
@@ -59,7 +59,7 @@
 }
 
 .yearLabel {
-  font-size: 12px;
+  font-size: 13px;
   color: $text-disabled;
 }
 
@@ -76,16 +76,16 @@
 
 .date {
   width: 60px;
-  font-size: 12px;
+  font-size: 13px;
   color: $text-subtle;
 
   @include media(false, tablet) {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
 .title {
-  font-size: 12px;
+  font-size: 13px;
   color: $text-muted;
 
   svg {

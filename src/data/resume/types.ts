@@ -31,7 +31,8 @@ export interface ProjectDetail {
 
 export interface Project {
   title: ProjectTitle;
-  period: string | React.ReactNode;
+  period?: string | string[];
+  type?: "maintenance";
   details: {
     kr: ProjectDetail[];
     en: ProjectDetail[];

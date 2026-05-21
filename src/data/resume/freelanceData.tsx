@@ -18,7 +18,7 @@ export const freelanceData: CompanyProject = {
           en: "https://www.samsungvx.com"
         }
       },
-      period: "25.06 - 08 / 24.10 - 11 / 24.04 - 06",
+      period: ["2025.06 – 2025.08", "2024.10 – 2024.11", "2024.04 – 2024.06"],
       details: {
         kr: [
           { text: "React 기반 UI/UX 검증용 웹페이지 및 재사용 컴포넌트 라이브러리 구축" },
@@ -31,4 +31,4 @@ export const freelanceData: CompanyProject = {
       }
     }
   ]
-};
+}

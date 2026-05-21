@@ -1,6 +1,4 @@
 import { useState, useCallback } from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-
 import style from "./resume.module.scss";
 import FilterButtonGroup from "../../components/common/FilterButtonGroup";
 import ProjectsSection from "../../components/resume/ProjectsSection";
@@ -43,17 +41,9 @@ const Resume = () => {
                   {isKorean ? personalInfo.motto.kr : personalInfo.motto.en}
                 </p>
                 <p>
-                  <a href={`mailto:${personalInfo.email}`}>
-                    {personalInfo.email}
-                  </a>
-                  <div className={style.iconWrap}>
-                    <a href={personalInfo.linkedin} title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                      <FaLinkedin size={24}/>
-                    </a>
-                    <a href={personalInfo.github} title="Github" target="_blank" rel="noopener noreferrer">
-                      <FaGithub size={24}/>
-                    </a>
-                  </div>
+                  <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
+                  <a href={personalInfo.linkedin} title="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a href={personalInfo.github} title="Github" target="_blank" rel="noopener noreferrer">Github</a>
                 </p>
               </div>
             </div>

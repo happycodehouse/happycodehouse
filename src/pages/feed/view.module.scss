@@ -14,9 +14,8 @@
 }
 
 .viewNav {
-  height: 100px;
+  height: $header-height;
   padding: 0 6px;
-  border-bottom: 1px solid $border-subtle;
 
   a {
     font-size: 64px;
@@ -29,37 +28,47 @@
   }
 }
 
+.viewBody {
+  overflow-y: auto;
+  height: 100vh;
+  padding: 0 24px 120px;
+  border-left: 1px solid $border-subtle;
+}
+
 .viewMeta {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: $header-height;
+  padding: 6px 0;
+  margin: 0 0 24px;
+  border-bottom: 1px solid $border-default;
 
   h1 {
     font-weight: 500;
     font-size: 24px;
   }
 
-  span {}
-}
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-.viewBody {
-  overflow-y: auto;
-  height: 100vh;
-  padding: 6px 0 120px;
-  border-left: 1px solid $border-subtle;
+  span {
+    font-size: 13px;
+    color: $text-muted;
+  }
 }
 
 .viewContent {
-  width: 44%;
-
-  @include media(false, tablet) {
-    width: 100%;
-  }
-
   article {
     & + article {
       margin-top: 60px;
     }
 
     p {
+      padding-left: 8px;
       font-size: 13px;
 
       strong {
@@ -89,7 +98,7 @@
 
   h2 {
     position: relative;
-    padding-left: 10px;
+    padding-left: 8px;
     font-size: 17px;
     font-weight: 500;
     color: $text-secondary;
@@ -97,10 +106,10 @@
     &::before {
       content: '';
       position: absolute;
-      top: 10px;
+      top: 8px;
       left: 0;
-      width: 4px;
-      height: 10px;
+      width: 2px;
+      height: 12px;
       background: $color-highlight;
     }
 
@@ -151,7 +160,7 @@
     padding: 12px;
     margin: 12px 0 30px;
     white-space: pre;
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 

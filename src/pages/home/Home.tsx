@@ -4,9 +4,9 @@ import Icons from "uikit/dist/js/uikit-icons";
 
 import style from "./home.module.scss";
 
-import bear_hug from "../../assets/images/main/bear-hug.jpg";
-import bear_ice from "../../assets/images/main/bear-ice-cream.jpg";
-import bear_thinking from "../../assets/images/main/bear-thinking.jpg";
+import bearHug from "../../assets/images/main/bear-hug.jpg";
+import bearIce from "../../assets/images/main/bear-ice-cream.jpg";
+import bearThinking from "../../assets/images/main/bear-thinking.jpg";
 import BearAnimation from "../../components/home/BearAnimation";
 import GridItem from "../../components/home/GridItem";
 import { useResponsive } from "../../hooks/useResponsive";
@@ -26,7 +26,7 @@ const Home = () => {
     {
       id: "image-hug",
       type: "image",
-      image: bear_hug,
+      image: bearHug,
       title: "포옹",
       subtitle: "Hug",
       year: "2018"
@@ -47,7 +47,7 @@ const Home = () => {
     {
       id: "image-thinking",
       type: "image",
-      image: bear_thinking,
+      image: bearThinking,
       title: "생각하는 곰",
       subtitle: "Thinking Bear",
       year: "2018"
@@ -56,7 +56,7 @@ const Home = () => {
     {
       id: "image-ice",
       type: "image",
-      image: bear_ice,
+      image: bearIce,
       title: "한숨 돌리기",
       subtitle: "Sweet Escape",
       year: "2018"
