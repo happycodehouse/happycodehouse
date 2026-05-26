@@ -1,20 +1,20 @@
-import { Helmet } from 'react-helmet-async'
-import { useParams, Link } from 'react-router-dom'
-import UIkit from 'uikit'
-import Icons from 'uikit/dist/js/uikit-icons'
-import 'uikit/dist/css/uikit.min.css'
+import { Helmet } from "react-helmet-async";
+import { useParams, Link } from "react-router-dom";
+import UIkit from "uikit";
+import Icons from "uikit/dist/js/uikit-icons";
+import "uikit/dist/css/uikit.min.css";
 
-import ContentRenderer from '../../components/feed/ContentRenderer'
+import ContentRenderer from "../../components/feed/ContentRenderer";
 
-import { feedData } from '../../data/feed'
-import { formatDateFull } from '../../utils/formatDate'
+import { feedData } from "../../data/feed";
+import { formatDateFull } from "../../utils/formatDate";
 
-import style from './view.module.scss'
+import style from "./view.module.scss";
 
 UIkit.use(Icons);
 
 const View = () => {
-  const {id} = useParams();
+  const { id } = useParams();
   const post = feedData.find(item => item.id === id);
 
   if (!post) {
@@ -33,20 +33,20 @@ const View = () => {
           </div>
           <div className={style.viewBody}>
             <div className={style.viewMeta}>
+              <h1>{post.title}</h1>
               <div>
                 <span>{post.category}</span>
                 <span>{formatDateFull(post.date)}</span>
               </div>
-              <h1>{post.title}</h1>
             </div>
             <div className={style.viewContent}>
-              {post.content && <ContentRenderer content={post.content} />}
+              {post.content && <ContentRenderer content={post.content}/>}
             </div>
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default View;

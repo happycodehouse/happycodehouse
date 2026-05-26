@@ -22,7 +22,7 @@ const BlockRenderer = ({ block }: { block: ContentBlock }) => {
       return <strong>{block.value}</strong>
     case "link":
       return (
-        <a href={block.url} target="_blank" rel="noopener noreferrer">
+        <a className={style.link} href={block.url} target="_blank" rel="noopener noreferrer">
           {block.label}
         </a>
       )
@@ -30,8 +30,8 @@ const BlockRenderer = ({ block }: { block: ContentBlock }) => {
       return (
         <div className={style.imgBox} data-uk-lightbox="animation: fade">
           {block.src.map((src, i) => (
-            <a key={i} href={src}>
-              <img src={src} alt={block.alt?.[i] ?? ""} />
+            <a key={i} href={src} data-caption={block.alt?.[i] ?? ""}>
+              <img src={src} />
             </a>
           ))}
         </div>
@@ -45,9 +45,7 @@ const ContentRenderer = ({ content }: { content: FeedSection[] }) => (
   <>
     {content.map((section, i) => (
       <article key={i}>
-        {section.heading && (
-          <header><h2>{section.heading}</h2></header>
-        )}
+        {section.heading && <h2>{section.heading}</h2>}
         <div className={style.sectionBody}>
           {section.blocks.map((block, j) => (
             <BlockRenderer key={j} block={block} />

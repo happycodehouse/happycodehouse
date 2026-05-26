@@ -251,7 +251,7 @@ counter(); // 3`
         heading: "2. Configure SCSS File Watcher",
         blocks: [
           { type: "text", value: "Navigate to File > Settings > Tools > File Watchers and create a new watcher." },
-          { type: "images", src: [intellij_scss_img_01, intellij_scss_img_02] },
+          { type: "images", src: [intellij_scss_img_01, intellij_scss_img_02], alt: ["", ""] },
           { type: "heading", level: 3, value: "2-1. Regular CSS Compilation Settings" },
           { type: "strong", value: "1) Arguments:" },
           { type: "code", value: "$FileName$:$FileNameWithoutExtension$.css --no-source-map" },
