@@ -184,21 +184,6 @@
       }
     }
 
-    .tagWrap {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 4px;
-      padding-left: 12px;
-
-      span {
-        padding: 2px 4px;
-        border: 1px solid $text-muted;
-        font-size: 13px;
-        font-weight: 500;
-      }
-    }
-
     @include media(false, tablet) {
       .brief {
         padding-bottom: 24px;

@@ -108,14 +108,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isKorean }) => {
                       </li>
                     ))}
                   </ul>
-
-                  {project.tags && (
-                    <div className={style.tagWrap}>
-                      {project.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex}>{tag}</span>
-                      ))}
-                    </div>
-                  )}
                 </div>
               </div>
             ))}

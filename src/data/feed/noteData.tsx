@@ -43,7 +43,8 @@ export const noteData: FeedItem[] = [
     content: [
       {
         blocks: [
-          { type: "text", value: `I heard this story about a fish. He swims up to this older fish and says, "I'm trying to find this thing they call the ocean." "The ocean?" says the older fish, "that's what you're in right now." "This?" says the younger fish, "This is water. What I want is the ocean."` },
+          { type: "text", value: `I heard this story about a fish. He swims up to this older fish and says, "I'm trying to find this thing they call the ocean."` },
+          { type: "text", value: `"The ocean?" says the older fish, "that's what you're in right now." "This?" says the younger fish, "This is water. What I want is the ocean."` },
           { type: "strong", value: "Soul (2020), Disney Pixar" }
         ]
       }

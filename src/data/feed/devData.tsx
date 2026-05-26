@@ -203,7 +203,8 @@ console.log(x); // 5`
       {
         heading: "3. Closure",
         blocks: [
-          { type: "text", value: "A closure is when a function has access to variables from another function. When you have a function inside a function, the inner function can use the variables from the outer function. This is very useful in JavaScript for data privacy and creating functions that remember values." },
+          { type: "text", value: "A closure is when a function has access to variables from another function. When you have a function inside a function, the inner function can use the variables from the outer function." },
+          { type: "text", value: "This is very useful in JavaScript for data privacy and creating functions that remember values." },
           { type: "code", value:
               `function outer() {
   let count = 0;
