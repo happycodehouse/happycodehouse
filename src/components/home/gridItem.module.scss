@@ -33,11 +33,24 @@
       z-index: 1;
       font-family: $font-suit;
       font-size: 48px;
+      letter-spacing: -1px;
     }
   }
 
   @include media(false, tablet) {
     background: $bg-subtle;
+
+    &:nth-child(1),
+    &:nth-child(2),{
+      padding: 12px;
+    }
+
+    a {
+      > span {
+        font-size: 56px;
+        line-height: 1;
+      }
+    }
   }
 }
 
