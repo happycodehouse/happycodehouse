@@ -1,5 +1,5 @@
 import { labData } from './labData';
-import { devData } from './devData';
+import { tilData } from './tilData';
 import { noteData } from './noteData';
 import type { FeedItem } from './types';
 
@@ -8,5 +8,5 @@ const parseDate = (dateStr: string): Date => {
   return new Date(`20${year}-${month}-${day}`);
 };
 
-export const feedData: FeedItem[] = [...labData, ...devData, ...noteData]
+export const feedData: FeedItem[] = [...labData, ...tilData, ...noteData]
   .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime());

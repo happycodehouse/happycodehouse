@@ -6,10 +6,10 @@ import intellij_autoprefixer_img_01 from '../../assets/images/feed/intellij-auto
 import intellij_autoprefixer_img_02 from '../../assets/images/feed/intellij-autoprefixer/img-02.png'
 import intellij_autoprefixer_img_03 from '../../assets/images/feed/intellij-autoprefixer/img-03.png'
 
-export const devData: FeedItem[] = [
+export const tilData: FeedItem[] = [
   {
     id: "intellij-autoprefixer",
-    category: "DEV",
+    category: "TIL",
     date: "06.01.26",
     title: "IntelliJ IDEA Autoprefixer Setup Guide",
     content: [
@@ -71,7 +71,7 @@ export const devData: FeedItem[] = [
   },
   {
     id: "js-async-await",
-    category: "DEV",
+    category: "TIL",
     date: "16.12.25",
     title: "What is async/await?",
     content: [
@@ -105,7 +105,7 @@ console.log("Other work can happen here!");
   },
   {
     id: "js-this-keyword",
-    category: "DEV",
+    category: "TIL",
     date: "16.12.25",
     title: `What is the "this" keyword in JavaScript?`,
     content: [
@@ -143,7 +143,7 @@ console.log(cat.name); // "Whiskers"`
   },
   {
     id: "js-essential-concepts",
-    category: "DEV",
+    category: "TIL",
     date: "16.12.25",
     title: "JavaScript Essential Concepts",
     content: [
@@ -228,7 +228,7 @@ counter(); // 3`
   },
   {
     id: "intellij-scss",
-    category: "DEV",
+    category: "TIL",
     date: "08.09.25",
     title: "IntelliJ IDEA SCSS Setup Guide",
     content: [

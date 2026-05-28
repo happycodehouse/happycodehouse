@@ -21,11 +21,11 @@ interface ButtonData {
   label: string;
 }
 
-type FilterOption = "LAB" | "DEV" | "NOTE";
+type FilterOption = "LAB" | "TIL" | "NOTE";
 type SelectedFilter = "ALL" | FilterOption;
 
 const Feed: React.FC = () => {
-  const FILTER_OPTIONS: FilterOption[] = ["LAB", "DEV", "NOTE"];
+  const FILTER_OPTIONS: FilterOption[] = ["LAB", "TIL", "NOTE"];
   const [selectedFilter, setSelectedFilter] = useState<SelectedFilter>("ALL");
 
   const handleFilterClick = useCallback((filter: SelectedFilter) => {

@@ -59,7 +59,8 @@ export const noteData: FeedItem[] = [
       {
         heading: "The Problem from 2022",
         blocks: [
-          { type: "text", value: "I was put in charge of Secret Santa for our December 2023 year-end party. I heard the 2022 event didn't go well — the main issue was gift satisfaction. Since it's hard to really know your coworkers' preferences, people often received unwanted items that ended up unused and forgotten." }
+          { type: "text", value: "I was put in charge of Secret Santa for our December 2023 year-end party. I heard the 2022 event didn't go well — the main issue was gift satisfaction." },
+          { type: "text", value: "Since it's hard to really know your coworkers' preferences, people often received unwanted items that ended up unused and forgotten." }
         ]
       },
       {

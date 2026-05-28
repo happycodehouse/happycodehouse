@@ -1,10 +1,11 @@
 @charset "UTF-8";
+
 @use "../../styles/base/font" as *;
 @use "../../styles/base/variable" as *;
 @use "../../styles/base/mixin" as *;
 
 .gridBoxLeft {
-  height: calc(100vh - $header-height);
+  height: calc(100vh - #{$header-height});
 
   @include media(false, tablet) {
     height: auto;
@@ -14,7 +15,7 @@
 .feedArea {
   overflow: hidden;
   position: relative;
-  height: calc(100vh - $header-height);
+  height: calc(100vh - #{$header-height});
 }
 
 .feedList {
@@ -23,7 +24,6 @@
   li {
     a {
       display: flex;
-      align-items: center;
       justify-content: flex-start;
       position: relative;
       text-decoration: unset;
@@ -52,6 +52,11 @@
       }
     }
   }
+}
+
+.yearGroup,
+.date {
+  //width: 100px;
 }
 
 .yearGroup {
@@ -85,6 +90,7 @@
 }
 
 .title {
+  flex: 1;
   font-size: 13px;
   color: $text-muted;
 
@@ -95,7 +101,7 @@
   }
 
   @include media(false, tablet) {
-    font-size: 16px;
+    color: $text-default;
 
     svg {
       fill: $text-default;
