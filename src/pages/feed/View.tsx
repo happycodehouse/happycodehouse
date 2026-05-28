@@ -1,20 +1,19 @@
 import { Helmet } from "react-helmet-async";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom"; // Link 빼고 useNavigate 추가
 import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
 import "uikit/dist/css/uikit.min.css";
 
 import ContentRenderer from "../../components/feed/ContentRenderer";
-
 import { feedData } from "../../data/feed";
 import { formatDateFull } from "../../utils/formatDate";
-
 import style from "./view.module.scss";
 
 UIkit.use(Icons);
 
 const View = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const post = feedData.find(item => item.id === id);
 
   if (!post) {
@@ -29,14 +28,14 @@ const View = () => {
       <div className="container">
         <div className={style.viewWrapper}>
           <div className={style.viewNav}>
-            <Link to="/feed">/Feed</Link>
+            <button onClick={() => navigate(-1)}>/Feed</button>
           </div>
           <div className={style.viewBody}>
             <div className={style.viewMeta}>
               <h1>{post.title}</h1>
               <div>
-                <span>{post.category}</span>
                 <span>{formatDateFull(post.date)}</span>
+                <span>{post.category}</span>
               </div>
             </div>
             <div className={style.viewContent}>

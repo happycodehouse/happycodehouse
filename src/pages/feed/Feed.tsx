@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useCallback } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { PiArrowSquareOutBold } from "react-icons/pi";
 import style from "./feed.module.scss";
 import FilterButtonGroup from "../../components/common/FilterButtonGroup";
@@ -26,10 +26,15 @@ type SelectedFilter = "ALL" | FilterOption;
 
 const Feed: React.FC = () => {
   const FILTER_OPTIONS: FilterOption[] = ["LAB", "TIL", "NOTE"];
-  const [selectedFilter, setSelectedFilter] = useState<SelectedFilter>("ALL");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selectedFilter = (searchParams.get("filter") as SelectedFilter) || "ALL";
 
   const handleFilterClick = useCallback((filter: SelectedFilter) => {
-    setSelectedFilter(filter);
+    if (filter === "ALL") {
+      setSearchParams({});
+    } else {
+      setSearchParams({ filter });
+    }
   }, []);
 
   const filteredData = selectedFilter === "ALL"

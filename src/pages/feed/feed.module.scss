@@ -20,6 +20,7 @@
 
 .feedList {
   overflow-y: auto;
+  height: 100%;
 
   li {
     a {
@@ -44,6 +45,8 @@
   }
 
   @include media(false, tablet) {
+    height: auto;
+
     li {
       a {
         &::before {
@@ -75,7 +78,7 @@
   font-weight: 500;
 
   @include media(false, tablet) {
-    color: $text-default;
+    color: $text-default !important;
   }
 }
 
