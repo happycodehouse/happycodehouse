@@ -75,7 +75,8 @@ export const labData: FeedItem[] = [
         blocks: [
           { type: "link", label: "🌐 Live Demo", url: "https://circular-heritage.netlify.app/" },
           { type: "link", label: "📂 Github", url: "https://github.com/happycodehouse/circular-heritage" },
-          { type: "text", value: "The original codebase suffered from hardcoded repetitive logic and manual state management that made it difficult to maintain. I rewrote the scroll animation system from the ground up, reducing 200+ lines of imperative code down to 80 lines of clean, declarative JavaScript." }
+          { type: "text", value: "The original codebase suffered from hardcoded repetitive logic and manual state management that made it difficult to maintain." },
+          { type: "text", value: " I rewrote the scroll animation system from the ground up, reducing 200+ lines of imperative code down to 80 lines of clean, declarative JavaScript." }
         ]
       },
       {
@@ -212,7 +213,8 @@ onUpdate: function (self) {
               "Easier to debug: PC/mobile logic lives in separate, isolated contexts",
               "More reliable: No manual state tracking means no synchronization bugs"
             ]},
-          { type: "text", value: "This refactor wasn't just about writing less code — it was about writing better code. Instead of manually handling each chapter with separate if statements, I used index-based loops to automate the process. This shifted the code from telling the browser 'how to scroll' step-by-step to simply declaring 'what to animate,' making it simpler and more reliable." }
+          { type: "text", value: "This refactor wasn't just about writing less code — it was about writing better code. Instead of manually handling each chapter with separate if statements, I used index-based loops to automate the process." },
+          { type: "text", value: "This shifted the code from telling the browser 'how to scroll' step-by-step to simply declaring 'what to animate,' making it simpler and more reliable." }
         ]
       }
     ]
