@@ -8,7 +8,7 @@
   grid-template-columns: 1fr 3fr;
 
   @include media(false, tablet) {
-    grid-template-columns: 1fr;
+    display: block;
   }
 }
 
@@ -27,6 +27,9 @@
   }
 
   @include media(false, tablet) {
+    height: auto;
+    padding: 12px;
+
     button {
       font-size: 56px;
     }
@@ -68,6 +71,7 @@
   }
 
   span {
+    text-transform: uppercase;
     font-size: 13px;
     color: $text-muted;
   }
@@ -78,10 +82,6 @@
 
     h1 {
       font-size: 20px;
-    }
-
-    > div {
-      border: 1px solid red;
     }
   }
 }
@@ -148,13 +148,11 @@
   }
 
   pre {
-    width: calc(100% - 24px);
     padding: 12px;
     margin: 12px 0 30px;
     white-space: pre;
     font-size: 13px;
   }
-
 }
 
 .sectionBody {

@@ -7,7 +7,7 @@ import intellij_autoprefixer_img_03 from '../../assets/images/feed/intellij-auto
 /* copy this
 {
   id: "",
-   category: "LAB",
+   category: "lab",
   date: "",
   title: "",
   externalUrl: ""
@@ -17,56 +17,56 @@ import intellij_autoprefixer_img_03 from '../../assets/images/feed/intellij-auto
 export const labData: FeedItem[] = [
   {
     id: "scroll-depth-gallery",
-    category: "LAB",
+    category: "lab",
     date: "13.05.26",
     title: "Scroll-reactive 3D gallery — Three.js · WebGL · GSAP",
     externalUrl: "https://scroll-depth-gallery.netlify.app/"
   },
   {
     id: "mask-scroll-transition",
-    category: "LAB",
+    category: "lab",
     date: "06.05.26",
     title: "SVG Blind Reveal - Scroll Image Transition",
     externalUrl: "https://mask-scroll-transition.netlify.app/"
   },
   {
     id: "lift-slideshow",
-    category: "LAB",
+    category: "lab",
     date: "28.04.26",
     title: "Vertical Lift Slideshow",
     externalUrl: "https://lift-slideshow.netlify.app/"
   },
   {
     id: "vanilla-infinite-center",
-    category: "LAB",
+    category: "lab",
     date: "19.01.26",
     title: "Vanilla Infinite Center",
     externalUrl: "https://vanilla-infinite-center.netlify.app/"
   },
   {
     id: "3d-folding-effect",
-    category: "LAB",
+    category: "lab",
     date: "13.11.25",
     title: "3D Folding Effect",
     externalUrl: "https://3d-folding-effect.netlify.app"
   },
   {
     id: "draggable-product-grid",
-    category: "LAB",
+    category: "lab",
     date: "10.11.25",
     title: "Draggable Product Grid",
     externalUrl: "https://draggable-product-grid.netlify.app"
   },
   {
     id: "sticky-vertical-slide",
-    category: "LAB",
+    category: "lab",
     date: "17.09.25",
     title: "Responsive Sticky Vertical Component",
     externalUrl: "https://sticky-vertical-slide.netlify.app/"
   },
   {
     id: "circular-heritage",
-    category: "LAB",
+    category: "lab",
     date: "03.09.25",
     title: "From 200 to 80 Lines: Heritage Page Code Optimization",
     content: [

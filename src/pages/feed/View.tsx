@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { useParams, useNavigate } from "react-router-dom"; // Link 빼고 useNavigate 추가
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
 import "uikit/dist/css/uikit.min.css";
@@ -14,6 +14,16 @@ UIkit.use(Icons);
 const View = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleBack = () => {
+    if (location.key !== "default") {
+      navigate(-1);
+    } else {
+      navigate("/feed");
+    }
+  };
+
   const post = feedData.find(item => item.id === id);
 
   if (!post) {
@@ -28,7 +38,7 @@ const View = () => {
       <div className="container">
         <div className={style.viewWrapper}>
           <div className={style.viewNav}>
-            <button onClick={() => navigate(-1)}>/Feed</button>
+            <button onClick={handleBack}>/Feed</button>
           </div>
           <div className={style.viewBody}>
             <div className={style.viewMeta}>

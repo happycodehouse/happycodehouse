@@ -3,7 +3,7 @@ import type { FeedItem } from './types'
 export const noteData: FeedItem[] = [
   {
     id: "frontend-in-the-ai-era",
-    category: "NOTE",
+    category: "note",
     date: "19.02.26",
     title: "Being a Frontend Developer When AI Writes the Code",
     content: [
@@ -37,7 +37,7 @@ export const noteData: FeedItem[] = [
   },
   {
     id: "soul",
-    category: "NOTE",
+    category: "note",
     date: "19.09.25",
     title: "I heard this story about a fish",
     content: [
@@ -52,7 +52,7 @@ export const noteData: FeedItem[] = [
   },
   {
     id: "secret-santa",
-    category: "NOTE",
+    category: "note",
     date: "18.09.25",
     title: "Flipping Secret Santa on Its Head",
     content: [

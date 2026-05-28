@@ -54,7 +54,6 @@
   position: relative;
   z-index: 1;
   text-align: left;
-  text-decoration: underline;
   opacity: 0.5;
   transition: all .4s;
   font-size: 14px;
@@ -79,6 +78,7 @@
     height: 100%;
     padding: 6px;
     font-family: $font-suit;
+    text-transform: uppercase;
   }
 
   @include media($from: tablet) {

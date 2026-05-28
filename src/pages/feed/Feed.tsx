@@ -21,11 +21,11 @@ interface ButtonData {
   label: string;
 }
 
-type FilterOption = "LAB" | "TIL" | "NOTE";
+type FilterOption = "lab" | "til" | "note";
 type SelectedFilter = "ALL" | FilterOption;
 
 const Feed: React.FC = () => {
-  const FILTER_OPTIONS: FilterOption[] = ["LAB", "TIL", "NOTE"];
+  const FILTER_OPTIONS: FilterOption[] = ["lab", "til", "note"];
   const [searchParams, setSearchParams] = useSearchParams();
   const selectedFilter = (searchParams.get("filter") as SelectedFilter) || "ALL";
 
