@@ -4,9 +4,40 @@ import intellij_autoprefixer_img_01 from '../../assets/images/feed/intellij-auto
 import intellij_autoprefixer_img_02 from '../../assets/images/feed/intellij-autoprefixer/img-02.png'
 import intellij_autoprefixer_img_03 from '../../assets/images/feed/intellij-autoprefixer/img-03.png'
 
+/* copy this
+{
+  id: "",
+   category: "LAB",
+  date: "",
+  title: "",
+  externalUrl: ""
+},
+*/
+
 export const labData: FeedItem[] = [
   {
-    id: "vanilla-carousel-demo",
+    id: "scroll-depth-gallery",
+    category: "LAB",
+    date: "13.05.26",
+    title: "Scroll-reactive 3D gallery — Three.js · WebGL · GSAP",
+    externalUrl: "https://scroll-depth-gallery.netlify.app/"
+  },
+  {
+    id: "mask-scroll-transition",
+    category: "LAB",
+    date: "06.05.26",
+    title: "SVG Blind Reveal - Scroll Image Transition",
+    externalUrl: "https://mask-scroll-transition.netlify.app/"
+  },
+  {
+    id: "lift-slideshow",
+    category: "LAB",
+    date: "28.04.26",
+    title: "Vertical Lift Slideshow",
+    externalUrl: "https://lift-slideshow.netlify.app/"
+  },
+  {
+    id: "vanilla-infinite-center",
     category: "LAB",
     date: "19.01.26",
     title: "Vanilla Infinite Center",

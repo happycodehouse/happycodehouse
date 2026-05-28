@@ -25,6 +25,12 @@
       color: $color-highlight;
     }
   }
+
+  @include media(false, tablet) {
+    a {
+      font-size: 56px;
+    }
+  }
 }
 
 .viewBody {
@@ -32,6 +38,11 @@
   height: 100vh;
   padding: 6px 12px 120px;
   border-left: 1px solid $border-subtle;
+
+  @include media(false, tablet) {
+    overflow: initial;
+    height: auto;
+  }
 }
 
 .viewMeta {
@@ -44,8 +55,8 @@
   border-bottom: 1px solid $border-default;
 
   h1 {
-    font-weight: 500;
     font-size: 24px;
+    font-weight: 500;
     color: $text-default;
   }
 
@@ -58,6 +69,13 @@
   span {
     font-size: 13px;
     color: $text-muted;
+  }
+
+  @include media(false, tablet) {
+    justify-content: initial;
+    h1 {
+      font-size: 20px;
+    }
   }
 }
 
