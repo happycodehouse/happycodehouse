@@ -21,8 +21,10 @@
     line-height: 1;
     color: $text-disabled;
 
-    &:hover {
-      color: $color-highlight;
+    @include media($from: tablet) {
+      &:hover {
+        color: $color-highlight;
+      }
     }
   }
 
@@ -72,7 +74,7 @@
 
   span {
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 10px;
     color: $text-muted;
   }
 
