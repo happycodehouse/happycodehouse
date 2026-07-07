@@ -8,7 +8,7 @@ $gridCnt: 4;
 .gridWrapper {
   display: grid;
   grid-template-columns: repeat($gridCnt, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: repeat($gridCnt, 1fr);
   height: 100vh;
   background: $bg-subtle;
 

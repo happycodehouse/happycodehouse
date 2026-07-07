@@ -64,7 +64,7 @@ const Feed: React.FC = () => {
   ];
 
   if (!feedData?.length) {
-    return <div className="container">No feed data available</div>;
+    return <div className="container">No feed data available.</div>;
   }
 
   const noResults = filteredData.length === 0;

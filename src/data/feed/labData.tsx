@@ -4,17 +4,23 @@ import intellij_autoprefixer_img_01 from "../../assets/images/feed/intellij-auto
 import intellij_autoprefixer_img_02 from "../../assets/images/feed/intellij-autoprefixer/img-02.png";
 import intellij_autoprefixer_img_03 from "../../assets/images/feed/intellij-autoprefixer/img-03.png";
 
-/* copy this
+export const labData: FeedItem[] = [
+  /*
 {
   id: "",
-   category: "lab",
+  category: "lab",
   date: "",
   title: "",
   externalUrl: ""
 },
 */
-
-export const labData: FeedItem[] = [
+  {
+  id: "pinned-grid",
+  category: "lab",
+  date: "07.07.26",
+  title: "Scroll-Driven Grid Animation",
+  externalUrl: "https://pinned-grid.netlify.app/"
+  },
   {
     id: "bubble-reveal",
     category: "lab",

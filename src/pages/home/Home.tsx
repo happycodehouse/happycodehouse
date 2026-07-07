@@ -13,10 +13,15 @@ import { useResponsive } from "../../hooks/useResponsive";
 
 UIkit.use(Icons);
 
+type GridItemData =
+  | { id: string; type: "animation" }
+  | { id: string; type: "image"; image: string; title: string; subtitle: string; year: string }
+  | { id: string; type: "link"; linkTo: string; title: string };
+
 const Home = () => {
   const { isDesktop } = useResponsive();
-  
-  const baseGridItems = [
+
+  const baseGridItems: (GridItemData | null)[] = [
     null,
     null,
     {
@@ -62,48 +67,53 @@ const Home = () => {
       year: "2018"
     },
     null,
-    null
+    null,
+    null,
+    null,
+    null,
+    null,
   ];
-  
+
   const getGridItems = () => {
     if (isDesktop) {
       return baseGridItems;
     } else {
-      const filtered = baseGridItems.filter(item => item !== null);
-      
+      const filtered = baseGridItems.filter(
+        (item): item is NonNullable<typeof item> => item !== null
+      );
       const animations = filtered.filter(item => item.type === "animation");
       const links = filtered.filter(item => item.type === "link");
       const images = filtered.filter(item => item.type === "image");
-      
+
       return [...links, ...animations, ...images];
     }
   };
-  
+
   const gridItems = getGridItems();
-  
+
   useEffect(() => {
     // DOM이 완전히 렌더링된 후 lightbox 재초기화
     const timer = setTimeout(() => {
-      const lightboxElements = document.querySelectorAll('[data-uk-lightbox]');
+      const lightboxElements = document.querySelectorAll("[data-uk-lightbox]");
       lightboxElements.forEach(el => {
         UIkit.lightbox(el);
       });
     }, 100);
-    
+
     // cleanup function
     return () => clearTimeout(timer);
   }, [gridItems]);
-  
+
   return (
     <div className="container">
       <div className={style.gridWrapper}>
         {gridItems.map((item, index) => {
           if (!item) return <div key={`empty-${index}`}></div>;
-          
+
           if (item.type === "animation") {
             return <BearAnimation key={item.id} />;
           }
-          
+
           return <GridItem key={item.id} {...item} />;
         })}
       </div>

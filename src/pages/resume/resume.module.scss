@@ -167,7 +167,7 @@
       li {
         position: relative;
         width: fit-content;
-        padding-left: 12px;
+        padding-left: 8px;
         margin-bottom: 6px;
         font-size: 13px;
 
@@ -176,7 +176,7 @@
         }
 
         &::before {
-          content: "-";
+          content: "·";
           position: absolute;
           top: 0;
           left: 0;
