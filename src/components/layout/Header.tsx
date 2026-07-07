@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import headerStyle from "./header.module.scss";
@@ -19,7 +19,7 @@ const NavItem: React.FC<NavItemProps> = ({ item, currentPath }) => {
 
   return (
     <li {...getHoverProps()}>
-      <div className="overlay" style={overlayStyle} />
+      <div className="overlay" style={overlayStyle}/>
       <Link to={item.path}>
         {currentPath === "/" ? "" : "/ "}{item.label}
       </Link>

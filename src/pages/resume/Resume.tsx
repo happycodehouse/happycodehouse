@@ -42,8 +42,8 @@ const Resume = () => {
                 </p>
                 <p>
                   <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
-                  <a href={personalInfo.linkedin} title="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  <a href={personalInfo.github} title="Github" target="_blank" rel="noopener noreferrer">Github</a>
+                  <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">Github</a>
                 </p>
               </div>
             </div>

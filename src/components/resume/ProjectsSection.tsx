@@ -27,14 +27,14 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({ href, children, className }
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ isKorean }) => {
   const renderDetailItem = (detail: any) => {
     if (detail.video) {
-      return <BubbleBox video={detail.video} text={detail.text} />;
+      return <BubbleBox video={detail.video} text={detail.text}/>;
     }
 
     if (detail.url) {
       const isMultipleUrls = Array.isArray(detail.url) && detail.url.length > 1;
 
       if (isMultipleUrls) {
-        return <BubbleBox urls={detail.url} text={detail.text} />;
+        return <BubbleBox urls={detail.url} text={detail.text}/>;
       }
 
       const singleUrl = Array.isArray(detail.url) ? detail.url[0] : detail.url;

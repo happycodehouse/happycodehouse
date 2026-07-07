@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { HelmetProvider } from "react-helmet-async";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -8,7 +8,7 @@ import Feed from "./pages/feed/Feed";
 import View from "./pages/feed/View";
 import Welcome from "./pages/home/Home";
 import Resume from "./pages/resume/Resume";
-import "./App.scss"
+import "./App.scss";
 
 function App() {
   return (

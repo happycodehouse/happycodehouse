@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useLocation } from "react-router-dom";
 
 import Footer from "./Footer";
@@ -16,10 +16,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div id="wrap">
-      {!isViewPage && !isHomePage && <Header />}
+      {!isViewPage && !isHomePage && <Header/>}
       {children}
-      {!isViewPage && !isHomePage && <Footer />}
-      {isViewPage && <ScrollToTopButton className={isViewPage ? "scroll-to-top-button--view" : ""} />}
+      {!isViewPage && !isHomePage && <Footer/>}
+      {isViewPage && <ScrollToTopButton className={isViewPage ? "scroll-to-top-button--view" : ""}/>}
     </div>
   );
 };

@@ -13,7 +13,7 @@ export const useResponsive = () => {
     maxWidth: BREAKPOINTS.tablet
   });
   const isDesktop = useMediaQuery({ minWidth: BREAKPOINTS.tablet + 1 });
-  
+
   return {
     isMobile,
     isTablet,

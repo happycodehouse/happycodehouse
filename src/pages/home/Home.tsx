@@ -111,7 +111,7 @@ const Home = () => {
           if (!item) return <div key={`empty-${index}`}></div>;
 
           if (item.type === "animation") {
-            return <BearAnimation key={item.id} />;
+            return <BearAnimation key={item.id}/>;
           }
 
           return <GridItem key={item.id} {...item} />;

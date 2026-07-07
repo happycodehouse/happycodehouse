@@ -1,4 +1,4 @@
-import type { CompanyProject } from './types';
+import type { CompanyProject } from "./types";
 
 export const freelanceData: CompanyProject = {
   company: {
@@ -31,4 +31,4 @@ export const freelanceData: CompanyProject = {
       }
     }
   ]
-}
+};

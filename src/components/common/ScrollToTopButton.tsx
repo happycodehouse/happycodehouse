@@ -34,7 +34,7 @@ const ScrollToTopButton = ({ className }: ScrollToTopButtonProps) => {
     <button
       type="button"
       onClick={handleScrollToTop}
-      className={`scroll-to-top-button ${className || ''}`}
+      className={`scroll-to-top-button ${className || ""}`}
     >
       <img src={icTop} alt=""/>
     </button>

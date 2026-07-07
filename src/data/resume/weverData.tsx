@@ -1,5 +1,5 @@
-import React from 'react';
-import type { CompanyProject } from './types';
+import React from "react";
+import type { CompanyProject } from "./types";
 
 export const weverData: CompanyProject = {
   company: {
@@ -59,10 +59,14 @@ export const weverData: CompanyProject = {
           { text: "반응형 웹 구현 및 지속적 유지보수 담당" }
         ],
         en: [
-          { text: <>Developed and maintained websites for <a href="https://daedong-kioti.com/" target="_blank" rel="noopener noreferrer">Daedong</a> and ITcen Group subsidiaries (5 corporate sites)</> },
+          {
+            text: <>Developed and maintained websites for <a href="https://daedong-kioti.com/" target="_blank"
+                                                             rel="noopener noreferrer">Daedong</a> and ITcen Group
+              subsidiaries (5 corporate sites)</>
+          },
           { text: "Implemented responsive design architecture and provided ongoing technical support" }
         ]
       }
     }
   ]
-}
+};

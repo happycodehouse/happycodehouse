@@ -1,9 +1,9 @@
-import React from 'react';
-import type { CompanyProject } from './types';
-import samickthkMp4 from '../../assets/videos/resume/samickthk.mp4';
-import hanatourcompanyMp4 from '../../assets/videos/resume/hanatourcompany.mp4';
-import samsungMp4 from '../../assets/videos/resume/samsung.mp4';
-import xiElevatorMp4 from '../../assets/videos/resume/xi-elevator.mp4';
+import React from "react";
+import type { CompanyProject } from "./types";
+import samickthkMp4 from "../../assets/videos/resume/samickthk.mp4";
+import hanatourcompanyMp4 from "../../assets/videos/resume/hanatourcompany.mp4";
+import samsungMp4 from "../../assets/videos/resume/samsung.mp4";
+import xiElevatorMp4 from "../../assets/videos/resume/xi-elevator.mp4";
 
 export const uberData: CompanyProject = {
   company: {
@@ -71,7 +71,9 @@ export const uberData: CompanyProject = {
         ],
         en: [
           { text: "Full website redesign following CI renewal" },
-          { text: "Device-specific GSAP ScrollTrigger interactions with separate mobile/PC logic", video: xiElevatorMp4 }
+          {
+            text: "Device-specific GSAP ScrollTrigger interactions with separate mobile/PC logic", video: xiElevatorMp4
+          }
         ]
       }
     },
@@ -84,12 +86,18 @@ export const uberData: CompanyProject = {
       period: "2024.12 – 2025.05",
       details: {
         kr: [
-          { text: "GSAP ScrollTrigger 기반 뷰포트 연동 영상/애니메이션 제어", url: "https://daesangwellife.com/kr/about-us/company/overview" },
+          {
+            text: "GSAP ScrollTrigger 기반 뷰포트 연동 영상/애니메이션 제어",
+            url: "https://daesangwellife.com/kr/about-us/company/overview"
+          },
           { text: "디자인 시스템 및 재사용 컴포넌트 라이브러리 구축" },
           { text: "반응형 디자인 및 크로스 브라우징 구현" }
         ],
         en: [
-          { text: "GSAP ScrollTrigger for viewport-aware video/animation control", url: "https://daesangwellife.com/en/about-us/company/overview" },
+          {
+            text: "GSAP ScrollTrigger for viewport-aware video/animation control",
+            url: "https://daesangwellife.com/en/about-us/company/overview"
+          },
           { text: "Established design system and reusable component library" },
           { text: "Responsive design with cross-browser compatibility" }
         ]
@@ -156,15 +164,27 @@ export const uberData: CompanyProject = {
       type: "maintenance",
       details: {
         kr: [
-          { text: <><a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> 기술 리소스 플랫폼 구축 및 운영</> },
+          {
+            text: <><a href="https://product.samsungsem.com/index.do" target="_blank"
+                       rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank"
+                                                           rel="noopener noreferrer">CL</a> 기술 리소스 플랫폼 구축 및 운영</>
+          },
           { text: "AJAX 동적 로딩 구현으로 페이지 로딩 속도 30% 개선", url: "https://samsungsem.com/kr/bepuco/contest.do" },
           { text: "WCAG 2.1 AA 인증 연간 갱신 (WebWatch 심사)" },
           { text: "지속가능경영 카테고리 인터랙티브 데이터 시각화 구현", video: samsungMp4 },
           { text: "뉴스레터 월간 제작 및 발송 운영 (멀티 플랫폼 호환성 최적화)" }
         ],
         en: [
-          { text: <><a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> Platform Development & Operations</> },
-          { text: "AJAX-based dynamic loading with 30% speed improvement", url: "https://samsungsem.com/kr/bepuco/contest.do" },
+          {
+            text: <><a href="https://product.samsungsem.com/index.do" target="_blank"
+                       rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank"
+                                                           rel="noopener noreferrer">CL</a> Platform Development &
+              Operations</>
+          },
+          {
+            text: "AJAX-based dynamic loading with 30% speed improvement",
+            url: "https://samsungsem.com/kr/bepuco/contest.do"
+          },
           { text: "Maintained WCAG 2.1 AA certification through annual WebWatch audits" },
           { text: "Developed Sustainability Category with interactive data visualizations", video: samsungMp4 },
           { text: "Monthly newsletter production and delivery with multi-platform compatibility" }
@@ -179,14 +199,22 @@ export const uberData: CompanyProject = {
       type: "maintenance",
       details: {
         kr: [
-          { text: <><a href="https://samyangspecialty.com/kr/index" target="_blank" rel="noopener noreferrer">Samyang Specialty</a> / <a href="https://www.samyangep.com/kr/index" target="_blank" rel="noopener noreferrer">삼양사 AM BU</a> 홈페이지 통합 관리</> },
+          {
+            text: <><a href="https://samyangspecialty.com/kr/index" target="_blank" rel="noopener noreferrer">Samyang
+              Specialty</a> / <a href="https://www.samyangep.com/kr/index" target="_blank" rel="noopener noreferrer">삼양사
+              AM BU</a> 홈페이지 통합 관리</>
+          },
           { text: "정기적 콘텐츠 업데이트 및 기술 유지보수" }
         ],
         en: [
-          { text: <><a href="https://samyangspecialty.com/en/index" target="_blank" rel="noopener noreferrer">Samyang Specialty</a> and <a href="https://www.samyangep.com/en/index" target="_blank" rel="noopener noreferrer">Samyang AM BU</a> Website Management</> },
+          {
+            text: <><a href="https://samyangspecialty.com/en/index" target="_blank" rel="noopener noreferrer">Samyang
+              Specialty</a> and <a href="https://www.samyangep.com/en/index" target="_blank" rel="noopener noreferrer">Samyang
+              AM BU</a> Website Management</>
+          },
           { text: "Regular content updates and technical maintenance" }
         ]
       }
     }
   ]
-}
+};

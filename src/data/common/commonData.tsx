@@ -10,9 +10,9 @@ export const languageData = [
 ] as ButtonType[];
 
 export const personalInfo = {
-  name: {kr: "장하담", en: "HADAM JANG"},
+  name: { kr: "장하담", en: "HADAM JANG" },
   position: "Web Frontend Developer",
-  motto: {kr: "뜻이 있는 곳에 길이 있다.", en: "Where there is a will, there is a way."},
+  motto: { kr: "뜻이 있는 곳에 길이 있다.", en: "Where there is a will, there is a way." },
   email: "hadamjang.dev@gmail.com",
   linkedin: "https://www.linkedin.com/in/hadam-jang-10256536a/",
   github: "https://github.com/happycodehouse"

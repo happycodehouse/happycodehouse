@@ -15,11 +15,11 @@ export const labData: FeedItem[] = [
 },
 */
   {
-  id: "pinned-grid",
-  category: "lab",
-  date: "07.07.26",
-  title: "Scroll-Driven Grid Animation",
-  externalUrl: "https://pinned-grid.netlify.app/"
+    id: "pinned-grid",
+    category: "lab",
+    date: "07.07.26",
+    title: "Scroll-Driven Grid Animation",
+    externalUrl: "https://pinned-grid.netlify.app/"
   },
   {
     id: "bubble-reveal",

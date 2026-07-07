@@ -14,7 +14,7 @@ interface FilterButtonItemProps<T> {
   onButtonClick: (value: T) => void;
 }
 
-const FilterButtonItem = <T,>({
+const FilterButtonItem = <T, >({
   button,
   isSelected,
   onButtonClick
@@ -25,7 +25,7 @@ const FilterButtonItem = <T,>({
 
   return (
     <div className={style.buttonWrap} {...getHoverProps()}>
-      <div className="overlay" style={overlayStyle} />
+      <div className="overlay" style={overlayStyle}/>
       <button
         className={`${style.button} ${isSelected ? style.selected : ""}`}
         onClick={() => onButtonClick(button.value)}
@@ -43,7 +43,7 @@ interface FilterButtonGroupProps<T> {
   className?: string;
 }
 
-const FilterButtonGroup = <T,>({
+const FilterButtonGroup = <T, >({
   buttons = [],
   selectedValue,
   onButtonClick,
