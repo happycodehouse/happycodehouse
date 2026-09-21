@@ -19,6 +19,26 @@ export const uberData: CompanyProject = {
   projects: [
     {
       title: {
+        kr: "이스틸포유 기업 홈페이지 리뉴얼",
+        en: "Esteel4U Corporate Website Renewal",
+        url: { kr: "https://www.esteel4u.com/", en: "https://www.esteel4u.com/" }
+      },
+      period: "2026.06 – 2026.09",
+      details: {
+        kr: [
+          { text: "메인 페이지 및 기업소개 영역 중심 프론트엔드 개발, 인터랙션 모션 구현" },
+          { text: "메인 키비주얼·연혁 페이지를 관리자에서 직접 등록·수정 가능한 구조로 제작" },
+          { text: "사용자 피드백을 반영한 모션 개선 및 조정" }
+        ],
+        en: [
+          { text: "Front-end development focused on the main page and company introduction, with interaction motion" },
+          { text: "Built admin-editable main key visual and company history pages" },
+          { text: "Refined motion based on user feedback" }
+        ]
+      }
+    },
+    {
+      title: {
         kr: "DB그룹 CI 아카이브 개편",
         en: "DB GROUP CI ARCHIVE RENEWAL",
         url: { kr: "https://ci.dbgroup.co.kr/", en: "https://ci.dbgroup.co.kr/" }
@@ -165,9 +185,7 @@ export const uberData: CompanyProject = {
       details: {
         kr: [
           {
-            text: <><a href="https://product.samsungsem.com/index.do" target="_blank"
-                       rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank"
-                                                           rel="noopener noreferrer">CL</a> 기술 리소스 플랫폼 구축 및 운영</>
+            text: <><a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> 기술 리소스 플랫폼 구축 및 운영</>
           },
           { text: "AJAX 동적 로딩 구현으로 페이지 로딩 속도 30% 개선", url: "https://samsungsem.com/kr/bepuco/contest.do" },
           { text: "WCAG 2.1 AA 인증 연간 갱신 (WebWatch 심사)" },
@@ -176,9 +194,7 @@ export const uberData: CompanyProject = {
         ],
         en: [
           {
-            text: <><a href="https://product.samsungsem.com/index.do" target="_blank"
-                       rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank"
-                                                           rel="noopener noreferrer">CL</a> Platform Development &
+            text: <><a href="https://product.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">PS</a>/<a href="https://weblib.samsungsem.com/index.do" target="_blank" rel="noopener noreferrer">CL</a> Platform Development &
               Operations</>
           },
           {
@@ -213,6 +229,24 @@ export const uberData: CompanyProject = {
               AM BU</a> Website Management</>
           },
           { text: "Regular content updates and technical maintenance" }
+        ]
+      }
+    },
+    {
+      title: {
+        kr: "BMW 파이낸셜 서비스 홈페이지 유지운영",
+        en: "BMW Financial Services Website Maintenance",
+        url: { kr: "https://www.bmwfs.co.kr/", en: "https://www.bmwfs.co.kr/" }
+      },
+      type: "maintenance",
+      details: {
+        kr: [
+          { text: "차량 프로모션·할인 정보 등 금융 상품 콘텐츠 및 배너 업데이트" },
+          { text: "월 단위 프로모션 일정에 맞춘 적시 반영 및 페이지 유지보수" }
+        ],
+        en: [
+          { text: "Updated financing content and banners, including vehicle promotions and discount information" },
+          { text: "Timely updates aligned with monthly promotion schedules, plus ongoing page maintenance" }
         ]
       }
     }

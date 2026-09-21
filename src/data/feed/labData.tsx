@@ -13,7 +13,13 @@ export const labData: FeedItem[] = [
   title: "",
   externalUrl: ""
 },
-*/
+*/{
+    id: "notice-popup",
+    category: "lab",
+    date: "11.09.26",
+    title: "🔔 Popdate — Scheduled Notice Popup",
+    externalUrl: "https://notice-popup.netlify.app/"
+  },
   {
     id: "pinned-grid",
     category: "lab",
