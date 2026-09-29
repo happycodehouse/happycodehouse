@@ -23,7 +23,7 @@ export const uberData: CompanyProject = {
         en: "Esteel4U Corporate Website Renewal",
         url: { kr: "https://www.esteel4u.com/", en: "https://www.esteel4u.com/" }
       },
-      period: "2026.06 – 2026.09",
+      period: "2026.07 – 2026.09",
       details: {
         kr: [
           { text: "메인 페이지 및 기업소개 영역 중심 프론트엔드 개발, 인터랙션 모션 구현" },
