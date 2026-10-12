@@ -21,7 +21,7 @@ export const uberData: CompanyProject = {
       title: {
         kr: "이스틸포유 기업 홈페이지 리뉴얼",
         en: "Esteel4U Corporate Website Renewal",
-        url: { kr: "https://www.esteel4u.com/", en: "https://www.esteel4u.com/" }
+        url: { kr: "https://home.esteel4u.com/", en: "https://home.esteel4u.com/" }
       },
       period: "2026.07 – 2026.09",
       details: {
